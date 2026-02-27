@@ -219,6 +219,20 @@ Add color to headers using CSS classes:
 
 Available: `.text-primary`, `.text-secondary`, `.text-accent-1`, `.text-accent-2`, `.text-accent-3`, `.text-error`, `.text-bright`, `.text-dim`
 
+## Year Archives
+
+Year archives require creating a section page for each year:
+```bash
+mkdir -p content/posts/YYYY
+cat > content/posts/YYYY/_index.md << 'EOF'
+---
+title: "YYYY"
+---
+EOF
+```
+
+Replace `YYYY` with the year (e.g., 2026). This only needs to be done once per year when you publish your first post of that year.
+
 ## Development
 
 To run the example site locally:

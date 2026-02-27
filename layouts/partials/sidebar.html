@@ -53,7 +53,7 @@
     <!-- GroupByDate uses "2006" format to group by year -->
     {{ range (.Site.RegularPages.GroupByDate "2006").Reverse }}
       <li class="year-item">
-        <a href="{{ "/" | relURL }}posts/?year={{ .Key }}">{{ .Key }}</a>
+        <a href="{{ printf "posts/%s/" .Key | relURL }}">{{ .Key }}</a>
         <span class="year-count">{{ len .Pages }}</span>
       </li>
     {{ end }}
