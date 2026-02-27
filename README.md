@@ -17,6 +17,8 @@ A clean, dark-themed Hugo blog template designed for technical writing and docum
 
 ## Demo
 
+![Darklane Theme](images/darklane-example.png)
+
 Check out the [example site](exampleSite/) to see all features in action.
 
 ## Installation
