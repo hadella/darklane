@@ -1,0 +1,49 @@
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "Darklane Theme Demo"
+theme = "darklane"
+
+# Number of posts to show on home page
+paginate = 5
+
+# Enable syntax highlighting
+[markup]
+  [markup.highlight]
+    lineNos = false
+    lineNumbersInTable = false
+    noClasses = false
+
+  [markup.goldmark.renderer]
+    # Allow HTML in markdown (needed for some formatting)
+    unsafe = true
+
+# Taxonomy configuration (categories and tags)
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+# Site parameters
+[params]
+  description = "A demonstration of the Darklane Hugo theme"
+  author = "Your Name"
+
+  # Number of recent posts to show in sidebar
+  recentPostsCount = 5
+
+  # Default banner image if post doesn't specify one
+  defaultBanner = "/images/default-banner.jpg"
+
+  # Number of words if no <!--more-->
+  summaryLength = 70
+
+# Main menu configuration
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2

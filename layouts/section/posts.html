@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<!-- Check if viewing a specific year via URL parameter -->
+{{ $year := 0 }} {{ $urlPath := .RelPermalink }} {{ if strings.HasSuffix
+$urlPath "/" }} {{ $segments := split (strings.TrimSuffix "/" $urlPath) "/" }}
+{{ $lastSegment := index $segments (sub (len $segments) 1) }} {{ if eq (len
+$lastSegment) 4 }} {{ $year = int $lastSegment }} {{ end }} {{ end }} {{ if ne
+$year 0 }}
+<!-- Year archive view -->
+<header class="list-header">
+    <h1>Posts from {{ $year }}</h1>
+    {{ $yearPosts := where .Site.RegularPages "Type" "posts" }} {{ $yearPosts =
+    where $yearPosts "Date.Year" $year }}
+    <p class="post-count">
+        {{ len $yearPosts }} {{ if eq (len $yearPosts) 1 }}post{{ else }}posts{{
+        end }}
+    </p>
+</header>
+
+<section class="list-content">
+    {{ range $yearPosts.ByDate.Reverse }} {{ partial "post-preview.html" . }} {{
+    end }}
+</section>
+{{ else }}
+<!-- All posts view -->
+<section class="list-content">
+    {{ range .Pages.ByDate.Reverse }} {{ partial "post-preview.html" . }} {{ end
+    }}
+</section>
+{{ end }} {{ end }}

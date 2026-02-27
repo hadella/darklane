@@ -1,0 +1,6 @@
+{{- $summary := .Get 0 | default "Click to expand" -}}
+
+<details class="details-box">
+    <summary class="details-summary">{{ $summary }}</summary>
+    <div class="details-content">{{ .Inner | markdownify }}</div>
+</details>

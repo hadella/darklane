@@ -1,0 +1,3 @@
+{{- $color := .Get "color" | default "" | lower -}}
+
+<div class="table-wrapper table-{{ $color }}">{{ .Inner | markdownify }}</div>

@@ -1,0 +1,18 @@
+name = "Darklane"
+license = "MIT"
+licenselink = "https://github.com/hadella/darklane/blob/main/LICENSE"
+description = "A clean, dark-themed Hugo blog with custom shortcodes, syntax highlighting, and CSS variables for easy customization"
+homepage = "https://github.com/hadella/darklane"
+demosite = "https://hadella.github.io/darklane/"
+tags = ["blog", "dark", "technical", "minimal", "clean", "modern"]
+features = ["syntax-highlighting", "latex", "responsive", "shortcodes", "css-variables"]
+min_version = "0.112.0"
+
+[author]
+  name = "Justin Hadella"
+  homepage = "https://github.com/hadella"
+
+# Optional - for Hugo Modules (you can add this later)
+# [module]
+#   [module.hugoVersion]
+#     min = "0.112.0"
