@@ -1,5 +1,3 @@
-cd ~/darklane
-cat > publish.sh << 'EOF'
 #!/bin/bash
 
 echo "Building example site..."
@@ -29,6 +27,3 @@ echo "Switching back to main..."
 git checkout main
 
 echo "Done! Site will be live at https://hadella.github.io/darklane/"
-EOF
-
-chmod +x publish.sh
