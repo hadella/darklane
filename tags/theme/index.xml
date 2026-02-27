@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Theme on Darklane Theme Demo</title>
+    <link>https://hadella.github.io/darklane/tags/theme/</link>
+    <description>Recent content in Theme on Darklane Theme Demo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://hadella.github.io/darklane/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to Darklane</title>
+      <link>https://hadella.github.io/darklane/posts/welcome/</link>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://hadella.github.io/darklane/posts/welcome/</guid>
+      <description>&lt;p&gt;Welcome to the Darklane theme demo! This is a simple example post to showcase the basic layout and styling.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  
+  <title>Markdown Guide | Darklane Theme Demo</title>
+
+  
+  
+    <meta name="description" content="A demonstration of the Darklane Hugo theme">
+  
+
+  
+  
+    <meta name="author" content="Your Name">
+  
+
+  
+  <meta property="og:title" content="Markdown Guide">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://hadella.github.io/darklane/posts/markdown-guide/">
+  
+
+  
+  <link rel="stylesheet" href="/darklane/css/darklane.css">
+
+  
+  <link rel="stylesheet" href="/darklane/css/syntax.css">
+
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+        integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
+        crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+          integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+          crossorigin="anonymous"></script>
+
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+          crossorigin="anonymous"
+          onload="renderMathInElement(document.body, {
+            delimiters: [
+              {left: '$$', right: '$$', display: true},   // Display math
+              {left: '$', right: '$', display: false}      // Inline math
+            ]
+          });"></script>
+
+  
+  </head>
+
+<body>
+  <header>
+    <div class="container">
+        <div class="site-header">
+            
+            <h1 class="site-title">
+                <a href="https://hadella.github.io/darklane/">Darklane Theme Demo</a>
+            </h1>
+
+            
+            <nav>
+                
+                <ul>
+                    
+                    <li>
+                        <a href="/darklane/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/darklane/about/">About</a>
+                    </li>
+                    
+                </ul>
+                
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+  <div class="container">
+    <div class="main-content">
+      
+      <div class="content-column">
+        
+
+
+
+<article class="post">
+  
+  
+    
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+<div class="article-banner">
+    <img src="/images/default-banner.jpg" alt="Markdown Guide" />
+    <h1 class="banner-title">Markdown Guide</h1>
+</div>
+
+  
+
+  
+  
+  <div class="post-meta">
+    <span>Published: February 25, 2026</span>
+
+    
+      <span>
+        Categories:
+        
+          
+          <a href="/categories/documentation/">documentation</a>
+        
+      </span>
+    
+
+    
+      <span>
+        Tags:
+        
+          
+          <a href="/tags/markdown/">markdown</a>
+        
+          , 
+          <a href="/tags/formatting/">formatting</a>
+        
+          , 
+          <a href="/tags/guide/">guide</a>
+        
+      </span>
+    
+  </div>
+  
+
+  
+  <div class="post-content">
+    <p>This post demonstrates the standard Markdown formatting features supported by Darklane.</p>
+<h2 id="headers">Headers</h2>
+<p>Darklane supports all six header levels with clean typography:</p>
+<h1 id="h1-header">H1 Header</h1>
+<h2 id="h2-header">H2 Header</h2>
+<h3 id="h3-header">H3 Header</h3>
+<h4 id="h4-header">H4 Header</h4>
+<h5 id="h5-header">H5 Header</h5>
+<h6 id="h6-header">H6 Header</h6>
+<p>You can also add color to headers using CSS classes:</p>
+<h2 class="text-primary" id="colored-header">Colored Header</h2>
+<h2 class="text-accent-2" id="another-color">Another Color</h2>
+<p>The colors are:</p>
+<ul>
+<li>.text-primary</li>
+<li>.text-secondary</li>
+<li>.text-accent-1</li>
+<li>.text-accent-2</li>
+<li>.text-accent-3</li>
+<li>.text-error</li>
+<li>.text-bright</li>
+<li>.text-dim</li>
+</ul>
+<h2 id="text-formatting">Text Formatting</h2>
+<p><strong>Bold text</strong> for emphasis, <em>italic text</em> for subtle emphasis, and <code>inline code</code> for technical terms.</p>
+<p>You can combine them: <em><strong>bold and italic</strong></em> or <strong>bold with <code>code</code></strong>.</p>
+<h2 id="lists">Lists</h2>
+<p>Unordered lists:</p>
+<ul>
+<li>First item</li>
+<li>Second item
+<ul>
+<li>Nested item</li>
+<li>Another nested item</li>
+</ul>
+</li>
+<li>Third item</li>
+</ul>
+<p>Ordered lists:</p>
+<ol>
+<li>First step</li>
+<li>Second step
+<ol>
+<li>Sub-step A</li>
+<li>Sub-step B</li>
+</ol>
+</li>
+<li>Third step</li>
+</ol>
+<h2 id="code-blocks">Code Blocks</h2>
+<p>Syntax highlighted code blocks with language detection:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">n</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">greet</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hello, </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">!`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">greet</span><span class="p">(</span><span class="s2">&#34;World&#34;</span><span class="p">);</span>
+</span></span></code></pre></div><p>You can also highlight specific lines:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">calculate_sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span></span><span class="line hl"><span class="cl">    <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>  <span class="c1"># This line is highlighted</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Calculating...&#34;</span><span class="p">)</span>
+</span></span><span class="line hl"><span class="cl">    <span class="k">return</span> <span class="n">result</span>   <span class="c1"># This line is highlighted too</span>
+</span></span></code></pre></div><h2 id="tables">Tables</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Support</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Syntax Highlighting</td>
+<td>✓</td>
+<td>Multiple languages</td>
+</tr>
+<tr>
+<td>LaTeX Math</td>
+<td>✓</td>
+<td>Inline and display</td>
+</tr>
+<tr>
+<td>Responsive</td>
+<td>✓</td>
+<td>Mobile-friendly</td>
+</tr>
+<tr>
+<td>Dark Mode</td>
+<td>✓</td>
+<td>Built-in</td>
+</tr>
+</tbody>
+</table>
+<h2 id="blockquotes">Blockquotes</h2>
+<blockquote>
+<p>This is a blockquote. It&rsquo;s useful for highlighting important information or quoting other sources.</p>
+<p>Blockquotes can span multiple paragraphs and include other formatting.</p>
+</blockquote>
+<h2 id="links-and-images">Links and Images</h2>
+<p>Visit the <a href="https://gohugo.io/">Hugo documentation</a> for more information.</p>
+<p>Images work too (when you add them to your post bundle):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Alt text</span>](<span class="na">image.jpg</span>)
+</span></span></code></pre></div><h2 id="latex-math">LaTeX Math</h2>
+<p>Inline math: $E = mc^2$</p>
+<p>Display math:</p>
+<p>$$
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+$$</p>
+<h2 id="horizontal-rules">Horizontal Rules</h2>
+<p>Use three dashes for a horizontal rule:</p>
+<hr>
+<p>That&rsquo;s the basics of Markdown in Darklane!</p>
+  </div>
+</article>
+
+
+      </div>
+
+      
+      <aside class="sidebar-column">
+        
+
+
+<div class="sidebar-widget">
+  <h3>Recent Posts</h3>
+  <ul>
+    
+    
+    
+      <li class="recent-post-item">
+        <a href="https://hadella.github.io/darklane/posts/shortcode-gallery/">Shortcode Gallery</a>
+        <span class="recent-post-date">Feb 26, 2026</span>
+      </li>
+    
+      <li class="recent-post-item">
+        <a href="https://hadella.github.io/darklane/posts/markdown-guide/">Markdown Guide</a>
+        <span class="recent-post-date">Feb 25, 2026</span>
+      </li>
+    
+      <li class="recent-post-item">
+        <a href="https://hadella.github.io/darklane/posts/welcome/">Welcome to Darklane</a>
+        <span class="recent-post-date">Feb 24, 2026</span>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+<div class="sidebar-widget">
+  <h3>Categories</h3>
+  <ul>
+    
+    
+      <li class="taxonomy-item">
+        <a href="https://hadella.github.io/darklane/categories/documentation/">Documentation</a>
+        <span class="taxonomy-count">2</span>
+      </li>
+    
+      <li class="taxonomy-item">
+        <a href="https://hadella.github.io/darklane/categories/introduction/">Introduction</a>
+        <span class="taxonomy-count">1</span>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="sidebar-widget">
+  <h3>Tags</h3>
+  <div class="tag-cloud">
+    
+    
+      <a href="https://hadella.github.io/darklane/tags/features/">Features</a>
+    
+      <a href="https://hadella.github.io/darklane/tags/formatting/">Formatting</a>
+    
+      <a href="https://hadella.github.io/darklane/tags/guide/">Guide</a>
+    
+      <a href="https://hadella.github.io/darklane/tags/hugo/">Hugo</a>
+    
+      <a href="https://hadella.github.io/darklane/tags/markdown/">Markdown</a>
+    
+      <a href="https://hadella.github.io/darklane/tags/shortcodes/">Shortcodes</a>
+    
+      <a href="https://hadella.github.io/darklane/tags/theme/">Theme</a>
+    
+      <a href="https://hadella.github.io/darklane/tags/welcome/">Welcome</a>
+    
+  </div>
+</div>
+
+
+
+
+<div class="sidebar-widget">
+  <h3>Archive</h3>
+  <ul>
+    
+    
+    
+      <li class="year-item">
+        <a href="/posts/?year=2026">2026</a>
+        <span class="year-count">4</span>
+      </li>
+    
+  </ul>
+</div>
+
+
+      </aside>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+        <p class="footer-text">
+            &copy; 2026 Your Name &middot; Powered by
+            <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>
+            using the Darklane theme
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
