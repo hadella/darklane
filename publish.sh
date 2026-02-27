@@ -1,25 +1,27 @@
 #!/bin/bash
 
-# Build the site (while on main)
-echo "Building site on main branch..."
-hugo -s exampleSite -d ../public_temp
+echo "Building example site..."
+cd exampleSite
+hugo
+cd ..
 
-# Switch to gh-pages
-echo "Switching to gh-pages..."
+echo "Switching to gh-pages branch..."
 git checkout gh-pages
 
-# Clean and copy
-echo "Deploying..."
-git rm -rf .
-cp -r ../public_temp/* .
-rm -rf ../public_temp
+echo "Copying new build..."
+cp -r exampleSite/public/* .
 
-# Commit and push
+echo "Cleaning source files..."
+rm -rf exampleSite
+
+echo "Committing changes..."
 git add .
-git commit -m "Deploy - $(date '+%Y-%m-%d %H:%M')"
+git commit -m "Deploy example site - $(date '+%Y-%m-%d %H:%M')"
+
+echo "Pushing to GitHub..."
 git push origin gh-pages
 
-# Back to main
+echo "Switching back to main..."
 git checkout main
 
 echo "Done!"
