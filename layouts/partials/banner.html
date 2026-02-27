@@ -18,11 +18,11 @@
 printf "/images/banners/%s.jpg" $categoryName }}
 <!-- Note: fileExists doesn't work reliably in Hugo, so skip this check -->
 {{ $bannerPath = .Site.Params.defaultBanner | default
-"/images/default-banner.jpg" }}
+"images/default-banner.jpg" }}
 
 <!-- Third: Use site default banner -->
 {{ else }} {{ $bannerPath = .Site.Params.defaultBanner | default
-"/images/default-banner.jpg" }} {{ end }}
+"images/default-banner.jpg" }} {{ end }}
 
 <!-- Render the banner with title overlay -->
 <div class="article-banner">
