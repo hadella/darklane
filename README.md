@@ -19,7 +19,7 @@ A clean, dark-themed Hugo blog template designed for technical writing and docum
 
 ![Darklane Theme](images/darklane-example.png)
 
-Check out the [demo](https://hadella.github.io/darklane/)) to see all features in action.
+Check out the [demo](https://hadella.github.io/darklane/) to see all features in action.
 
 ## Installation
 
