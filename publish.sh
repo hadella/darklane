@@ -2,7 +2,7 @@
 
 echo "Building example site..."
 cd exampleSite
-hugo
+hugo --minify
 cd ..
 
 echo "Switching to gh-pages branch..."
