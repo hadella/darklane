@@ -124,6 +124,7 @@ All theme colors are defined as CSS variables in `static/css/darklane.css`. Edit
   --color-accent-1: #C678DD;     /* Magenta */
   --color-accent-2: #FF8F40;     /* Orange */
   --color-accent-3: #FFBF00;     /* Yellow */
+  --color-error: #f92672;        /* Red */
   /* ... and more */
 }
 ```
@@ -145,7 +146,7 @@ This is a warning message.
 {{< /alert >}}
 ```
 
-Types: `warning`, `info`, `note`, `error`, `important`
+Types: `info`, `note`, `warning`, `success`, `error`, `important`
 
 ### Highlights
 
@@ -155,7 +156,7 @@ This is important information.
 {{< /highlight >}}
 ```
 
-Types: `tip`, `warning`, `success`, `error`, `important`
+Types: `info`, `note`, `warning`, `success`, `error`, `important`
 
 ### Collapsible Details
 
@@ -182,6 +183,17 @@ console.log("Hello");
 {{< /tabgroup >}}
 ```
 
+### Gallery
+```markdown
+{{< gallery >}}
+https://example.com/image1.jpg
+https://example.com/image2.jpg
+https://example.com/image3.jpg
+{{< /gallery >}}
+```
+
+Creates an image carousel with navigation arrows and keyboard support (left/right arrows). One image URL per line.
+
 ### Images
 
 ```markdown
@@ -191,7 +203,7 @@ console.log("Hello");
 ### Tables
 
 ```markdown
-{{< table color="primary" >}}
+{{< table color="info" >}}
 
 | Header 1 | Header 2 |
 |----------|----------|
@@ -200,7 +212,7 @@ console.log("Hello");
 {{< /table >}}
 ```
 
-Colors: `primary`, `secondary`, `accent-1`, `accent-2`, `accent-3`
+Colors: `info`, `note`, `warning`, `success`, `error`, `important`
 
 ### YouTube
 
