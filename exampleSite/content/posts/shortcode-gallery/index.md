@@ -13,16 +13,20 @@ Darklane includes several custom shortcodes to enhance your content beyond stand
 
 Alerts come in several types for different purposes:
 
-{{< alert warning >}}
-This is a warning alert. Use it to caution readers about potential issues.
-{{< /alert >}}
-
 {{< alert info >}}
-This is an informational alert. Great for sharing helpful tips.
+This is an informational alert. Great for sharing helpful info.
 {{< /alert >}}
 
 {{< alert note >}}
 This is a note alert. Use it for general observations or side notes.
+{{< /alert >}}
+
+{{< alert warning >}}
+This is a warning alert. Use it to caution readers about potential issues.
+{{< /alert >}}
+
+{{< alert success >}}
+This is an success alert. Perfect for highlighting achievements.
 {{< /alert >}}
 
 {{< alert error >}}
@@ -30,7 +34,7 @@ This is an error alert. Perfect for highlighting mistakes to avoid.
 {{< /alert >}}
 
 {{< alert important >}}
-This is an important alert. Use it for critical information.
+This is an important alert. Use it for **critical** information.
 {{< /alert >}}
 
 You can also create unlabeled alerts:
@@ -41,9 +45,10 @@ This is a simple alert without a label, useful for general callouts.
 
 ### alert types:
 
-- warning
 - info
 - note
+- warning
+- success
 - error
 - important
 - (empty) - no label
@@ -52,9 +57,13 @@ This is a simple alert without a label, useful for general callouts.
 
 Highlights are similar to alerts but with different styling:
 
-{{< highlight tip >}}
+{{< highlight info >}}
 Highlights are great for key takeaways and important points.
 {{< /highlight >}}
+
+{{% highlight note %}}
+Highlights are great for sharing key takeaways and notes.
+{{% /highlight %}}
 
 {{< highlight warning >}}
 e careful with this approach in production environments.
@@ -74,7 +83,8 @@ Always backup your data before proceeding.
 
 ### highlight types
 
-- tip
+- info
+- note
 - warning
 - success
 - error
@@ -153,9 +163,9 @@ You can also control the width:
 
 ## Colored Tables
 
-Use the table shortcode to add color to your table headers:
+Use the table shortcode to add a little color to your table headers:
 
-{{< table color="secondary" >}}
+{{< table color="success" >}}
 
 | Language | Type | First Release |
 |----------|------|---------------|
@@ -166,7 +176,7 @@ Use the table shortcode to add color to your table headers:
 
 {{< /table >}}
 
-Available colors: `primary`, `secondary`, `accent-1`, `accent-2`, `accent-3`
+Available colors: `info`, `note`, `warning`, `success`, `error`, `important`
 
 ## YouTube Embeds
 
@@ -180,7 +190,7 @@ Embed YouTube videos easily:
 
 You can combine shortcodes to create rich content:
 
-{{< highlight tip >}}
+{{< highlight info >}}
 **Before starting:** Make sure you have all prerequisites installed.
 {{< /highlight >}}
 

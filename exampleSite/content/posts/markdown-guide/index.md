@@ -91,12 +91,31 @@ def calculate_sum(a, b):
 
 ## Tables
 
-| Feature | Support | Notes |
-|---------|---------|-------|
-| Syntax Highlighting | ✓ | Multiple languages |
-| LaTeX Math | ✓ | Inline and display |
-| Responsive | ✓ | Mobile-friendly |
-| Dark Mode | ✓ | Built-in |
+This table shows the default stying; it doesn't use a shortcode.
+
+| Language   | Type        | First Release |
+|------------|-------------|---------------|
+| Python     | Interpreted | 1991          |
+| JavaScript | Interpreted | 1995          |
+| Go         | Compiled    | 2009          |
+| Rust       | Compiled    | 2010          |
+
+If the same table uses the `table` shortcode, without a color argument, 
+the border between the labels data will be `--color-primary`.
+
+{{< table >}}
+
+| Feature             | Support | Notes              |
+|---------------------|---------|--------------------|
+| Syntax Highlighting | ✓       | Multiple languages |
+| LaTeX Math          | ✓       | Inline and display |
+| Responsive          | ✓       | Mobile-friendly    |
+| Dark Mode           | ✓       | Built-in           |
+
+{{< /table >}}
+
+> Tables don't need to *line-up* in the markdown to render correctly, but are
+> much easier to interpret when just reading as text.
 
 ## Blockquotes
 
