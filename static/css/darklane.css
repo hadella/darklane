@@ -9,6 +9,7 @@
     --color-accent-2: #ff8f40;
     --color-accent-3: #ffbf00;
     --color-error: #f92672;
+    /*--color-bg-darkdark: #050809;*/
     --color-bg-darkest: #0a0f14;
     --color-bg-dark: #11151c;
     --color-bg-medium: #14181d;
@@ -20,6 +21,25 @@
     --color-text-comment: #5c6370;
     --color-syntax-amber: #ffb454;
     --color-syntax-highlight: #2a3340;
+
+    /* ── Alert ──────────────────────────────────────────── */
+    --alert-info-color: var(--color-primary);
+    --alert-warning-color: var(--color-accent-2);
+    --alert-error-color: var(--color-error);
+    --alert-note-color: var(--color-accent-1);
+    --alert-important-color: var(--color-accent-3);
+    --alert-success-color: var(--color-secondary);
+    --alert-radius: 4px;
+
+    /* ── Gallery ────────────────────────────────────────── */
+    --gallery-bg: var(--color-bg-darkest);
+    --gallery-btn-color: var(--text-color);
+    --gallery-btn-hover: var(--color-primary);
+    --gallery-counter-color: var(--text-color);
+    --gallery-ratio: 1.25;
+
+    /* --- Table ------------------------------------------- */
+    --table-border-color: #3a3a5a;
 
     /* Base colors */
     --color-white: #ffffff;
@@ -948,44 +968,46 @@ footer {
 }
 
 /* Type variants */
-.alert-warning {
-    border-color: var(--color-accent-2);
-}
-
-.alert-warning .alert-label {
-    color: var(--color-accent-2);
-}
-
 .alert-info {
-    border-color: var(--color-primary);
+    border-color: var(--alert-info-color);
 }
-
 .alert-info .alert-label {
-    color: var(--color-primary);
+    color: var(--alert-info-color);
 }
 
 .alert-note {
-    border-color: var(--color-secondary);
+    border-color: var(--alert-note-color);
+}
+.alert-note .alert-label {
+    color: var(--alert-note-color);
 }
 
-.alert-note .alert-label {
-    color: var(--color-secondary);
+.alert-warning {
+    border-color: var(--alert-warning-color);
+}
+.alert-warning .alert-label {
+    color: var(--alert-warning-color);
+}
+
+.alert-success {
+    border-color: var(--alert-success-color);
+}
+.alert-success .alert-label {
+    color: var(--alert-success-color);
 }
 
 .alert-error {
-    border-color: var(--color-error);
+    border-color: var(--alert-error-color);
 }
-
 .alert-error .alert-label {
-    color: var(--color-error);
+    color: var(--alert-error-color);
 }
 
 .alert-important {
-    border-color: var(--color-accent-3);
+    border-color: var(--alert-important-color);
 }
-
 .alert-important .alert-label {
-    color: var(--color-accent-3);
+    color: var(--alert-important-color);
 }
 
 /* ============================================
@@ -1018,54 +1040,119 @@ footer {
 }
 
 /* Type variants */
-.highlight-tip {
-    border-color: var(--color-primary);
+.highlight-info {
+    border-color: var(--alert-info-color);
 }
-.highlight-tip .highlight-label {
-    color: var(--color-primary);
+.highlight-info .highlight-label {
+    color: var(--alert-info-color);
 }
-.highlight-tip .highlight-icon::before {
+.highlight-info .highlight-icon::before {
     content: "★";
 }
 
+.highlight-note {
+    border-color: var(--alert-note-color);
+}
+.highlight-note .highlight-label {
+    color: var(--alert-note-color);
+}
+.highlight-note .highlight-icon::before {
+    content: "✎";
+}
+
 .highlight-warning {
-    border-color: var(--color-accent-2);
+    border-color: var(--alert-warning-color);
 }
 .highlight-warning .highlight-label {
-    color: var(--color-accent-2);
+    color: var(--alert-warning-color);
 }
 .highlight-warning .highlight-icon::before {
     content: "⚠";
 }
 
 .highlight-success {
-    border-color: var(--color-secondary);
+    border-color: var(--alert-success-color);
 }
 .highlight-success .highlight-label {
-    color: var(--color-secondary);
+    color: var(--alert-success-color);
 }
 .highlight-success .highlight-icon::before {
     content: "✓";
 }
 
 .highlight-error {
-    border-color: var(--color-error);
+    border-color: var(--alert-error-color);
 }
 .highlight-error .highlight-label {
-    color: var(--color-error);
+    color: var(--alert-error-color);
 }
 .highlight-error .highlight-icon::before {
     content: "✗";
 }
 
 .highlight-important {
-    border-color: var(--color-accent-3);
+    border-color: var(--alert-important-color);
 }
 .highlight-important .highlight-label {
-    color: var(--color-accent-3);
+    color: var(--alert-important-color);
 }
 .highlight-important .highlight-icon::before {
     content: "⚡";
+}
+
+/* ============================================
+   Gallery
+   ============================================ */
+.gallery {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery-stage {
+    position: relative;
+    width: 100%;
+    background: var(--gallery-bg);
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    display: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery-img.active {
+    display: block !important;
+    margin: 0;
+}
+
+.gallery-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gallery-btn {
+    background: none;
+    border: none;
+    color: var(--gallery-btn-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem 0.75rem;
+    margin: 0;
+}
+
+.gallery-btn:hover {
+    color: var(--gallery-btn-hover);
+}
+
+.gallery-counter {
+    font-size: 0.85rem;
+    color: var(--gallery-counter-color);
+    opacity: 0.7;
+    letter-spacing: 0.05em;
 }
 
 /* ============================================
@@ -1077,46 +1164,97 @@ footer {
     overflow-x: auto;
     margin: 2rem 0;
 }
-
-/* Colored table variants */
-.table-wrapper.table-primary table {
-    border-color: var(--color-primary);
-}
-.table-wrapper.table-primary table th {
-    color: var(--color-primary);
-    border-color: var(--color-primary) !important;
+.table-wrapper {
+    overflow-x: auto;
+    margin: 1.5rem 0;
 }
 
-.table-wrapper.table-secondary table {
-    border-color: var(--color-secondary);
-}
-.table-wrapper.table-secondary table th {
-    color: var(--color-secondary);
-    border-color: var(--color-secondary) !important;
+.table-caption {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-bottom: 0.5rem;
 }
 
-.table-wrapper.table-accent-1 table {
-    border-color: var(--color-accent-1);
-}
-.table-wrapper.table-accent-1 table th {
-    color: var(--color-accent-1);
-    border-color: var(--color-accent-1) !important;
-}
-
-.table-wrapper.table-accent-2 table {
-    border-color: var(--color-accent-2);
-}
-.table-wrapper.table-accent-2 table th {
-    color: var(--color-accent-2);
-    border-color: var(--color-accent-2) !important;
+.table-wrapper table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.9rem;
+    border: 1px solid var(--table-border-color);
+    border-radius: var(--alert-radius);
+    overflow: hidden;
 }
 
-.table-wrapper.table-accent-3 table {
-    border-color: var(--color-accent-3);
+.table-wrapper th {
+    text-align: left;
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid var(--color-primary);
+    color: var(--color-white);
+    font-weight: 700;
+    letter-spacing: 0.03em;
 }
-.table-wrapper.table-accent-3 table th {
-    color: var(--color-accent-3);
-    border-color: var(--color-accent-3) !important;
+
+.table-wrapper td {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--color-bg-darkest);
+    color: var(--text-color);
+}
+
+.table-wrapper tr:last-child td {
+    border-bottom: none;
+}
+
+.table-wrapper tr:nth-child(even) td {
+    background: transparent;
+}
+
+.table-wrapper tr:nth-child(odd) td {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.table-wrapper th {
+    text-align: left;
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid var(--color-primary);
+    border-right: 1px solid var(--table-border-color);
+    color: var(--color-white);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.table-wrapper td {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--table-border-color);
+    border-right: 1px solid var(--table-border-color);
+    color: var(--text-color);
+}
+
+.table-wrapper th:last-child,
+.table-wrapper td:last-child {
+    border-right: none;
+}
+
+/* Color variants — header border takes type color */
+.table-accent th {
+    border-bottom-color: var(--accent-color);
+}
+.table-info th {
+    border-bottom-color: var(--alert-info-color);
+}
+.table-warning th {
+    border-bottom-color: var(--alert-warning-color);
+}
+.table-success th {
+    border-bottom-color: var(--alert-success-color);
+}
+.table-error th {
+    border-bottom-color: var(--alert-error-color);
+}
+.table-important th {
+    border-bottom-color: var(--alert-important-color);
+}
+.table-note th {
+    border-bottom-color: var(--alert-note-color);
 }
 
 /* ============================================

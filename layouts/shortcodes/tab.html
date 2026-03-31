@@ -1,3 +1,29 @@
+{{- /*
+    shortcodes/tab.html
+
+    Creates a single tab within a tabgroup. Must be used inside {{< tabgroup >}}.
+
+    Usage:
+        {{< tabgroup >}}
+
+        {{< tab title="Python" >}}
+        Content for Python tab.
+        {{< /tab >}}
+
+        {{< tab title="JavaScript" >}}
+        Content for JavaScript tab.
+        {{< /tab >}}
+
+        {{< /tabgroup >}}
+
+    Parameters:
+        - title: Tab label (default: "Tab")
+
+    The first tab is automatically active. Navigation via clicking or keyboard.
+*/ -}}
+
 {{- $title := .Get "title" | default "Tab" -}}
 
-<div class="tab-pane" data-title="{{ $title }}">{{ .Inner | markdownify }}</div>
+<div class="tab-pane" data-title="{{ $title }}">
+  {{ .Inner | markdownify }}
+</div>

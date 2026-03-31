@@ -1,6 +1,27 @@
+{{- /*
+    shortcodes/details.html
+
+    Creates a collapsible/expandable section with summary label.
+
+    Usage:
+        {{< details >}}
+        Hidden content that can be expanded.
+        {{< /details >}}
+
+        {{< details "Custom label text" >}}
+        Content here.
+        {{< /details >}}
+
+    Default label: "Click to expand"
+
+    Features clickable arrow that rotates when expanded, with hover effects.
+*/ -}}
+
 {{- $summary := .Get 0 | default "Click to expand" -}}
 
 <details class="details-box">
-    <summary class="details-summary">{{ $summary }}</summary>
-    <div class="details-content">{{ .Inner | markdownify }}</div>
+  <summary class="details-summary">{{ $summary }}</summary>
+  <div class="details-content">
+    {{ .Inner | markdownify }}
+  </div>
 </details>

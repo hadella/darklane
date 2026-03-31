@@ -1,8 +1,33 @@
-{{- $type := .Get 0 | default "tip" | lower -}}
+{{- /*
+    shortcodes/highlight.html
+
+    Creates emphasis boxes with icons and full border (vs alert's left border).
+
+    Usage:
+        {{< highlight info >}}
+        Important information to highlight.
+        {{< /highlight >}}
+
+    Available types:
+        - info      (cyan, ★ icon)
+        - note      (magenta/purple, ✎ icon)
+        - warning   (orange, ⚠ icon)
+        - success   (green, ✓ icon)
+        - error     (red, ✗ icon)
+        - important (yellow, ⚡ icon)
+
+    Default type: "info" if not specified
+
+    Renders with full colored border, icon, and label. Similar to alert but more prominent.
+*/ -}}
+
+{{- $type := .Get 0 | default "info" | lower -}}
 
 <div class="highlight-box highlight-{{ $type }}">
-    <div class="highlight-label">
-        <span class="highlight-icon"></span>{{ $type }}
-    </div>
-    <div class="highlight-content">{{ .Inner | markdownify }}</div>
+  <div class="highlight-label">
+    <span class="highlight-icon"></span>{{ $type }}
+  </div>
+  <div class="highlight-content">
+    {{ .Inner | markdownify }}
+  </div>
 </div>

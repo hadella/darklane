@@ -1,3 +1,35 @@
+{{- /*
+    shortcodes/table.html
+
+    Wraps markdown tables with optional colored headers.
+
+    Usage:
+        {{< table >}}
+        | Name | Age |
+        |------|-----|
+        | John | 30  |
+        {{< /table >}}
+
+        {{< table color="primary" >}}
+        | Header | Header |
+        |--------|--------|
+        | Data   | Data   |
+        {{< /table >}}
+
+    Available colors:
+        - primary   (cyan)
+        - secondary (green)
+        - accent-1  (magenta/purple)
+        - accent-2  (orange)
+        - accent-3  (yellow)
+
+    Default: no color (white headers with grey borders)
+
+    Colored tables have matching header text and outer border, with grey cell borders.
+*/ -}}
+
 {{- $color := .Get "color" | default "" | lower -}}
 
-<div class="table-wrapper table-{{ $color }}">{{ .Inner | markdownify }}</div>
+<div class="table-wrapper table-{{ $color }}">
+  {{ .Inner | markdownify }}
+</div>

@@ -1,3 +1,25 @@
+{{- /*
+    shortcodes/youtube.html
+
+    Embeds YouTube videos with responsive 16:9 aspect ratio.
+
+    Usage:
+        {{< youtube "dQw4w9WgXcQ" >}}
+
+        {{< youtube "dQw4w9WgXcQ" title="Custom video title" >}}
+
+    Parameters:
+        - First parameter: YouTube video ID (required)
+        - title: Video title for accessibility (default: "YouTube video")
+
+    The video ID is the part after "v=" in a YouTube URL:
+    https://www.youtube.com/watch?v=dQw4w9WgXcQ
+                                    └─────────┘
+                                     Video ID
+
+    Renders as responsive iframe with rounded corners.
+*/ -}}
+
 {{- $id := .Get 0 -}} {{- $title := .Get "title" | default "YouTube video" -}}
 
 <div class="youtube-embed">

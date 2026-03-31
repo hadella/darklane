@@ -1,3 +1,35 @@
+{{- /*
+    shortcodes/tabgroup.html
+
+    Creates a tabbed content container. Use with {{< tab >}} shortcodes inside.
+
+    Usage:
+        {{< tabgroup >}}
+
+        {{< tab title="Python" >}}
+```python
+        print("Hello")
+```
+        {{< /tab >}}
+
+        {{< tab title="JavaScript" >}}
+```javascript
+        console.log("Hello");
+```
+        {{< /tab >}}
+
+        {{< /tabgroup >}}
+
+    Parameters:
+        - id: Optional custom ID (auto-generated if not provided)
+
+    Features:
+        - First tab active by default
+        - Click tabs to switch content
+        - Hover effects with color transitions
+        - JavaScript-generated tab buttons from nested {{< tab >}} shortcodes
+*/ -}}
+
 {{- $id := .Get "id" | default (printf "tabs-%d" now.Unix) -}}
 
 <div class="tab-group" id="{{ $id }}">
