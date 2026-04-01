@@ -183,16 +183,30 @@ console.log("Hello");
 {{< /tabgroup >}}
 ```
 
-### Gallery
-```markdown
+### gallery
+```
 {{< gallery >}}
-https://example.com/image1.jpg
-https://example.com/image2.jpg
-https://example.com/image3.jpg
+https://r2.yourdomain.com/cars/frog/shot1.jpg
+https://r2.yourdomain.com/cars/frog/shot2.jpg
+/images/local-image.jpg
+{{< /gallery >}}
+
+{{< gallery width="600" >}}
+images/bundle-image.jpg
 {{< /gallery >}}
 ```
 
-Creates an image carousel with navigation arrows and keyboard support (left/right arrows). One image URL per line.
+One image URL per line in the shortcode body. Paths can be absolute
+URLs (e.g. Cloudflare R2), relative to `static/`, or relative to
+the page bundle.
+
+Parameters:
+- `width` — max width in px, centered on page (default: full width)
+
+Navigation via on-screen left/right arrows or keyboard arrow keys
+while hovering over the gallery. Counter shown as `1/N` centered
+between arrows. Image height is driven by the image dimensions —
+no fixed aspect ratio.
 
 ### Images
 
