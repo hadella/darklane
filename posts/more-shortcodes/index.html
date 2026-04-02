@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   
-  <title>Shortcode Gallery 2 | Darklane Theme Demo</title>
+  <title>More Shortcode Examples | Darklane Theme Demo</title>
 
   
   
@@ -19,7 +19,7 @@
   
 
   
-  <meta property="og:title" content="Shortcode Gallery 2">
+  <meta property="og:title" content="More Shortcode Examples">
   <meta property="og:type" content="article">
   <meta property="og:url" content="http://localhost:1313/darklane/posts/more-shortcodes/">
   
@@ -110,8 +110,8 @@
 
 
 <div class="article-banner">
-    <img src="/darklane/images/default-banner.jpg" alt="Shortcode Gallery 2" />
-    <h1 class="banner-title">Shortcode Gallery 2</h1>
+    <img src="/darklane/images/default-banner.jpg" alt="More Shortcode Examples" />
+    <h1 class="banner-title">More Shortcode Examples</h1>
 </div>
 
   
@@ -119,7 +119,7 @@
   
   
   <div class="post-meta">
-    <span>Published: March 30, 2026</span>
+    <span>Published: March 31, 2026</span>
 
     
       <span>
@@ -148,9 +148,18 @@
 
   
   <div class="post-content">
-    <h2 id="gallery-shortcode">Gallery Shortcode</h2>
+    <p>The gallery shortcode makes it easy to show multiple images as a slideshow without cluttering your post. Navigate with arrow buttons or keyboard.</p>
+<p>Key features:</p>
+<ul>
+<li>Takes a list of image URLs (one per line)</li>
+<li>Shows one image at a time with prev/next arrow buttons</li>
+<li>Keyboard navigation (left/right arrow keys)</li>
+<li>Counter showing &ldquo;X/N&rdquo; position</li>
+<li>Images adapt to their natural dimensions (no forced aspect ratio after your fixes)</li>
+<li>Auto-hides arrows if only one image</li>
+</ul>
 
-<div class="gallery" id="gal-1775085678920746129" data-count="5">
+<div class="gallery" id="gal-1775099833768868542" data-count="5">
 
     <div class="gallery-stage">
         <img class="gallery-img active"
@@ -188,7 +197,7 @@
 
 <script>
 (function() {
-    var gal     = document.getElementById("gal-1775085678920746129");
+    var gal     = document.getElementById("gal-1775099833768868542");
     var imgs    = gal.querySelectorAll(".gallery-img");
     var current = gal.querySelector(".gallery-current");
     var prev    = gal.querySelector(".gallery-prev");
@@ -234,7 +243,7 @@
 <h2 id="custom-width-gallery">Custom Width Gallery</h2>
 
 <div style="width: 100%;">
-    <div class="gallery" id="gal-1775085678920932904" data-count="5"
+    <div class="gallery" id="gal-1775099833769660087" data-count="5"
          style="max-width:600px; margin: 0 auto;">
 
     <div class="gallery-stage">
@@ -274,7 +283,7 @@
 
 <script>
 (function() {
-    var gal     = document.getElementById("gal-1775085678920932904");
+    var gal     = document.getElementById("gal-1775099833769660087");
     var imgs    = gal.querySelectorAll(".gallery-img");
     var current = gal.querySelector(".gallery-current");
     var prev    = gal.querySelector(".gallery-prev");
@@ -320,7 +329,39 @@
 <blockquote>
 <p>Notice each gallery can be operated independentally</p>
 </blockquote>
+<h2 id="space-shortcode">Space Shortcode</h2>
+<p>The space shortcode can be used to insert blank lines or breaks between elements.</p>
+<p>The next two images have the default gap between them
+<figure class="img-figure" style="--img-width: 600px;">
+  <img src="images/frame-1.jpg" alt="" /></figure>
 
+<figure class="img-figure" style="--img-width: 600px;">
+  <img src="images/frame-2.jpg" alt="" /></figure>
+</p>
+<p>By using the <em>space</em> shortcode we can increase the gap between the next two images.
+<figure class="img-figure" style="--img-width: 600px;">
+  <img src="images/frame-3.jpg" alt="" /></figure>
+
+<div class="space-block" style="height: 1rem;"></div>
+
+<figure class="img-figure" style="--img-width: 600px;">
+  <img src="images/frame-4.jpg" alt="" /></figure>
+</p>
+<blockquote>
+<p>In the text below we&rsquo;ll show how markdown text doesn&rsquo;t respect the addition of extra whitespace. We&rsquo;ll repeat several text sections: the first will flow all the text together, the next will add whitespace but it will be ignored, and the final one will use the space shortcode.*</p>
+</blockquote>
+<p>This is a line of text. And this is another. Notice the text will flow naturally together.</p>
+<div class="space-block" style="height: 1rem;"></div>
+
+<p>This is a line of text.
+And this is another.
+Notice the text will flow naturally together even though each sentence was on its own line.</p>
+<div class="space-block" style="height: 1rem;"></div>
+
+<p>This is a line of text. And this is yet another.
+<div class="space-block" style="height: 1rem;"></div>
+
+By using the <em>space</em> shortcode in between this line is now below the others.</p>
   </div>
 </article>
 
@@ -339,17 +380,17 @@
     
     
       <li class="recent-post-item">
-        <a href="http://localhost:1313/darklane/posts/layout-examples/">Layout/Cell/MD Shortcodes</a>
-        <span class="recent-post-date">Mar 30, 2026</span>
+        <a href="http://localhost:1313/darklane/posts/layout-examples/">Layout Shortcodes</a>
+        <span class="recent-post-date">Apr 1, 2026</span>
       </li>
     
       <li class="recent-post-item">
-        <a href="http://localhost:1313/darklane/posts/more-shortcodes/">Shortcode Gallery 2</a>
-        <span class="recent-post-date">Mar 30, 2026</span>
+        <a href="http://localhost:1313/darklane/posts/more-shortcodes/">More Shortcode Examples</a>
+        <span class="recent-post-date">Mar 31, 2026</span>
       </li>
     
       <li class="recent-post-item">
-        <a href="http://localhost:1313/darklane/posts/shortcode-gallery/">Shortcode Gallery</a>
+        <a href="http://localhost:1313/darklane/posts/shortcode-examples/">Shortcode Examples</a>
         <span class="recent-post-date">Feb 26, 2026</span>
       </li>
     
