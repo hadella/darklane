@@ -271,6 +271,20 @@ Parameters for `cell` and `md`:
 Use `cell` for shortcode content, `md` for markdown content.
 Mixing both within the same `layout` is supported.
 
+### Space
+```markdown
+{{< space >}}
+
+{{< space height="3rem" >}}
+```
+
+Adds vertical whitespace between content blocks. Useful for creating extra breathing room beyond default spacing.
+
+Parameters:
+- `height` — Amount of vertical space (default: `1rem`)
+
+Common use cases: extra spacing between images, separating shortcode groups, adding emphasis between sections.
+
 ### YouTube
 
 ```markdown

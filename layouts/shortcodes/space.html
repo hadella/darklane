@@ -1,0 +1,19 @@
+{{- /*
+    shortcodes/space.html
+
+    Adds vertical whitespace between content blocks.
+
+    Usage:
+        {{< space >}}
+
+        {{< space height="2rem" >}}
+
+    Parameters:
+        - height: Amount of space (default: 1rem)
+
+    Useful for adding breathing room between sections without <br> tags.
+*/ -}}
+
+{{- $height := .Get "height" | default "1rem" -}}
+
+<div class="space-block" style="height: {{ $height }};"></div>
