@@ -5,7 +5,10 @@ categories: ["documentation"]
 tags: ["shortcodes", "features"]
 ---
 
-Darklane includes several custom shortcodes to enhance your content beyond standard Markdown. This post demonstrates many of them.
+Darklane includes several custom shortcodes to enhance your content beyond standard Markdown.
+
+This post demonstrates the *alert*, *highlight*, *details*, *img*, *tab*, *tabgroup*, *table*, and *youtube* shortcodes.
+
 
 <!--more-->
 

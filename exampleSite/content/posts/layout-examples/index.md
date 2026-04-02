@@ -1,11 +1,13 @@
 ---
-title: "Layout/Cell/MD Shortcodes"
+title: "Layout Shortcodes"
 date: 2026-04-01
 categories: ["documentation"]
 tags: ["markdown", "formatting", "guide"]
 ---
 
 Darklane's layout shortcodes give you multi-column control in Hugo—just wrap your content in simple tags.
+
+This post demonstrates the *layout*, *cell*, and *md* shortcodes.
 
 <!--more-->
 
