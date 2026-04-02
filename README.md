@@ -14,7 +14,7 @@ A clean, dark-themed Hugo blog template designed for technical writing and docum
 - **Responsive Design** - Works great on desktop and mobile devices
 - **CSS Variables** - Easy color customization through centralized configuration
 - **Clean Typography** - Optimized for long-form technical reading
-
+ 
 ## Demo
 
 ![Darklane Theme](images/darklane-example.png)
@@ -227,6 +227,49 @@ no fixed aspect ratio.
 ```
 
 Colors: `info`, `note`, `warning`, `success`, `error`, `important`
+
+### layout / cell / md
+```
+{{< layout cols="1 1" gap="1rem" >}}
+{{< cell >}}
+{{< img src="photo.jpg" >}}
+{{< /cell >}}
+{{< cell >}}
+<p>Text next to image.</p>
+{{< /cell >}}
+{{< /layout >}}
+```
+
+For cells containing markdown (lists, headings, inline code) use `md`
+instead of `cell`:
+```
+{{< layout cols="1 2" gap="1rem" >}}
+{{< md >}}
+- Item one
+- Item two
+- Item three
+{{< /md >}}
+{{< md text="justify" >}}
+Lorem ipsum dolor sit amet...
+{{< /md >}}
+{{< /layout >}}
+```
+
+Layouts can be nested inside cells for complex arrangements.
+
+Parameters for `layout`:
+- `cols` — space-separated fr values e.g. `"1 2"` for 1/3 and 2/3
+            (default: equal columns based on cell count)
+- `gap` — gap between cells (default: `0`)
+- `align` — vertical alignment: `top`, `center`, `bottom`
+             (default: `top`)
+
+Parameters for `cell` and `md`:
+- `text` — text alignment: `left`, `center`, `right`, `justify`
+            (default: inherited from page)
+
+Use `cell` for shortcode content, `md` for markdown content.
+Mixing both within the same `layout` is supported.
 
 ### YouTube
 

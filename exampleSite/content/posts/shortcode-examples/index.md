@@ -1,11 +1,11 @@
 ---
-title: "Shortcode Gallery"
+title: "Shortcode Examples"
 date: 2026-02-26
 categories: ["documentation"]
 tags: ["shortcodes", "features"]
 ---
 
-Darklane includes several custom shortcodes to enhance your content beyond standard Markdown.
+Darklane includes several custom shortcodes to enhance your content beyond standard Markdown. This post demonstrates many of them.
 
 <!--more-->
 

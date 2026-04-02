@@ -1,11 +1,22 @@
 ---
-title: "Shortcode Gallery 2"
-date: 2026-03-30
+title: "Gallery Shortcode"
+date: 2026-03-31
 categories: ["documentation"]
 tags: ["shortcodes", "features"]
 ---
 
-## Gallery Shortcode
+The gallery shortcode makes it easy to show multiple images as a slideshow without cluttering your post. Navigate with arrow buttons or keyboard.
+
+<!--more-->
+
+Key features:
+
+- Takes a list of image URLs (one per line)
+- Shows one image at a time with prev/next arrow buttons
+- Keyboard navigation (left/right arrow keys)
+- Counter showing "X/N" position
+- Images adapt to their natural dimensions (no forced aspect ratio after your fixes)
+- Auto-hides arrows if only one image
 
 {{< gallery >}}
 images/frame-1.jpg
