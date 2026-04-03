@@ -183,7 +183,7 @@ console.log("Hello");
 {{< /tabgroup >}}
 ```
 
-### gallery
+### Gallery
 ```
 {{< gallery >}}
 https://r2.yourdomain.com/cars/frog/shot1.jpg
@@ -270,6 +270,32 @@ Parameters for `cell` and `md`:
 
 Use `cell` for shortcode content, `md` for markdown content.
 Mixing both within the same `layout` is supported.
+
+### Columns
+```markdown
+{{< columns count="2" gap="2rem" >}}
+Text flows naturally across columns like a newspaper.
+{{< /columns >}}
+```
+
+Parameters: `count` (default: 2), `gap` (default: 2rem). Collapses to single column on mobile.
+
+### Color
+```markdown
+Regular text with {{< color "primary" >}}cyan highlight{{< /color >}} inline.
+```
+
+Colors: `primary`, `secondary`, `accent-1`, `accent-2`, `accent-3`, `error`
+
+### HR
+```markdown
+{{< hr >}}
+{{< hr style="dots" >}}
+{{< hr style="dashed" >}}
+{{< hr style="fade" >}}
+```
+
+Styles: `line` (default), `dots`, `dashed`, `fade`. Better than markdown's default `---`.
 
 ### Space
 ```markdown

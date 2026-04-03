@@ -5,11 +5,15 @@ categories: ["documentation"]
 tags: ["shortcodes", "features"]
 ---
 
-The *gallery* shortcode makes it easy to show multiple images as a slideshow without cluttering your post. Navigate with arrow buttons or keyboard.
+Darklane includes layout and styling shortcodes for enhanced content control.
 
-The *space* shortcode can be used to add gaps between elements.
+This post demonstrates the *gallery*, *space*, *columns*, *color*, and *hr* shortcodes.
 
 <!--more-->
+
+## Gallery Shortcode
+
+The *gallery* shortcode makes it easy to show multiple images as a slideshow without cluttering your post. Navigate with arrow buttons or keyboard.
 
 Key features:
 
@@ -30,7 +34,7 @@ images/frame-5.jpg
 
 A simple gallery demo — use the arrows or keyboard left/right to cycle through images.
 
-## Custom Width Gallery
+### Custom Width Gallery
 
 {{< gallery width="600" >}}
 images/frame-1.jpg
@@ -72,3 +76,86 @@ Notice the text will flow naturally together even though each sentence was on it
 This is a line of text. And this is yet another.
 {{< space >}}
 By using the *space* shortcode in between this line is now below the others.
+
+## Columns Shortcode
+
+{{< columns >}}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+{{< alert note >}}
+Columns automatically flows and sizes
+{{< /alert>}}
+
+{{< img src="images/frame-1.jpg" >}}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+{{< /columns >}}
+
+> In the next example we'll distribute a bunch of bullet text across three columns. The shortcode does all the work!
+
+{{< columns count=3 >}}
+- feature 1
+- feature 2
+- feature 3
+- feature 4
+- feature 5
+- feature 6
+- feature 7
+- feature 8
+- feature 9
+- feature 10
+- feature 11
+- feature 12
+{{< /columns >}}
+
+## Color Shortcode
+
+The {{< color "primary" >}}color{{< /color >}} shortcode can be used to give a {{< color "accent-2" >}}splash{{< /color >}} of {{< color "accent-3" >}}color{{< /color >}} within text.
+
+{{< color "secondary" >}}
+{{< md >}}
+This is a entire block of colored test within an **md** shortcode.
+{{< highlight info >}}
+This highlight's styling should be uneffected even though it's embedded inside the **color** shortcode.
+{{< /highlight >}}
+{{< /md>}}
+{{< /color >}}
+
+## HR Shortcode
+
+The default markdown horizontal rule (`---`) looks like this:
+
+---
+
+{{< space height="4rem" >}}
+
+The **hr** shortcode provides styled dividers for better visual separation between sections.
+
+Without options, it renders a thin solid line:
+
+{{< hr >}}
+
+Same as explicitly using `style="line"`:
+
+{{< hr style="line" >}}
+
+The `dots` style creates a centered ornament:
+
+{{< hr style="dots" >}}
+
+Dashed line span the full width:
+
+{{< hr style="dashed" >}}
+
+The `fade` style creates a gradient from the edges:
+
+{{< hr style="fade" >}}
+
+### Available styles
+
+- `line` — solid line (default)
+- `dots` — centered three-dot ornament
+- `dashed` — dashed line across
+- `fade` — gradient fade from edges

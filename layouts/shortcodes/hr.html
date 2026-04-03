@@ -1,0 +1,24 @@
+{{- /*
+    shortcodes/hr.html
+
+    Creates styled horizontal dividers between content sections.
+
+    Usage:
+        {{< hr >}}
+
+        {{< hr style="dots" >}}
+
+        {{< hr style="gradient" >}}
+
+    Available styles:
+        - line     (default: solid line with accent color)
+        - dots     (three centered dots)
+        - dashes   (dotted lines all the way across)
+        - fade     (fade from edges to center)
+
+    Better than markdown's default `---` with customizable visual styles.
+*/ -}}
+
+{{- $style := .Get "style" | default "line" -}}
+
+<div class="hr-divider hr-{{ $style }}"></div>
