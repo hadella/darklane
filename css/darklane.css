@@ -1,7 +1,4 @@
-/* ============================================
-   DARKLANE THEME - Main Stylesheet
-   ============================================ */
-
+/* ~~~ DARKLANE THEME - Main Stylesheet ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 :root {
     --color-primary: #39bae6;
     --color-secondary: #26a98b;
@@ -97,9 +94,7 @@
     border-color: var(--color-accent-3);
 }
 
-/* ============================================
-   RESET & BASE STYLES
-   ============================================ */
+/* ~~~ RESET & BASE STYLES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 * {
     margin: 0;
     padding: 0;
@@ -127,9 +122,7 @@ body::-webkit-scrollbar {
     display: none; /* Chrome/Safari/Opera */
 }
 
-/* ============================================
-   TYPOGRAPHY
-   ============================================ */
+/* ~~~ TYPOGRAPHY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 h1,
 h2,
 h3,
@@ -247,9 +240,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ============================================
-   LAYOUT - Main Container & Grid
-   ============================================ */
+/* ~~~ LAYOUT - Main Container & Grid ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -275,9 +266,7 @@ a:hover {
     align-self: start;
 }
 
-/* ============================================
-   HEADER & NAVIGATION
-   ============================================ */
+/* ~~~ HEADER & NAVIGATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 header {
     background: url("../images/title-banner.png") center center / cover
         no-repeat;
@@ -338,9 +327,8 @@ nav a:hover {
     color: var(--color-accent-2);
 }
 
-/* ============================================
-   ARTICLE BANNER
-   ============================================ */
+/* ~~~ ARTICLE BANNER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 .article-banner {
     position: relative;
     width: 100%;
@@ -378,9 +366,7 @@ nav a:hover {
     margin: 0;
 }
 
-/* ============================================
-   POST CONTENT
-   ============================================ */
+/* ~~~ POST CONTENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .post-meta {
     color: var(--color-text-dim);
     font-size: 0.9rem;
@@ -578,9 +564,7 @@ nav a:hover {
     content: "✗";
 }
 
-/* ============================================
-   POST PREVIEW (Home page)
-   ============================================ */
+/* ~~~ POST PREVIEW (Home page) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .post-preview {
     background-color: var(--color-bg-dark);
     border-radius: 8px;
@@ -628,9 +612,7 @@ nav a:hover {
     color: var(--color-accent-1);
 }
 
-/* ============================================
-   SIDEBAR WIDGETS
-   ============================================ */
+/* ~~~ SIDEBAR WIDGETS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .sidebar-widget {
     background-color: var(--color-bg-dark);
     border-radius: 4px;
@@ -756,9 +738,7 @@ nav a:hover {
     font-size: 0.85rem;
 }
 
-/* ============================================
-   CODE BLOCKS
-   ============================================ */
+/* ~~~ CODE BLOCKS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 code {
     font-family:
         "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, monospace;
@@ -791,9 +771,7 @@ pre code {
     color: inherit;
 }
 
-/* ============================================
-   LATEX / MATH RENDERING
-   ============================================ */
+/* ~~~ LATEX / MATH RENDERING ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .katex {
     font-size: 1.1em;
 }
@@ -804,9 +782,7 @@ pre code {
     overflow-y: hidden;
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+/* ~~~ FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 footer {
     margin-top: 4rem;
     padding: 2rem 0;
@@ -828,9 +804,7 @@ footer {
     color: var(--color-primary);
 }
 
-/* ============================================
-   PAGINATION
-   ============================================ */
+/* ~~~ PAGINATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .pagination {
     display: flex;
     justify-content: center;
@@ -861,9 +835,7 @@ footer {
     border-color: var(--color-secondary);
 }
 
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
+/* ~~~ RESPONSIVE DESIGNS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* Tablets */
 @media (max-width: 968px) {
@@ -922,9 +894,7 @@ footer {
     }
 }
 
-/* ============================================
-   UTILITY CLASSES
-   ============================================ */
+/* ~~~ UTILITY CLASSES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .text-center {
     text-align: center;
 }
@@ -942,9 +912,7 @@ footer {
     margin-bottom: 2rem;
 }
 
-/* ============================================
-   Alert Styles
-   ============================================ */
+/* ~~~ Alert Shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* Base alert box (no label) */
 .alert-box {
@@ -1020,9 +988,104 @@ footer {
     color: var(--alert-important-color);
 }
 
-/* ============================================
-   Highlight Styles
-   ============================================ */
+/* ~~~ HR Shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Horizontal dividers */
+.hr-divider {
+    margin: 3rem auto;
+    width: 100%;
+    text-align: center;
+}
+
+/* Solid line (default) */
+.hr-line {
+    height: 0.5px;
+    background: var(--color-primary);
+    border: none;
+}
+
+/* Three dots */
+.hr-dots::before {
+    content: "• • •";
+    color: var(--color-text-dim);
+    font-size: 1rem;
+    letter-spacing: 1rem;
+}
+
+/* Gradient fade */
+.hr-fade {
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--color-text-dim) 50%,
+        transparent
+    );
+    border: none;
+}
+
+/* Dashed line across */
+.hr-dashed {
+    height: 0;
+    border: none;
+    border-top: 1px dashed var(--color-text-dim);
+}
+
+/* ~~~ Columns Shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Text columns - CSS multi-column layout */
+.text-columns {
+    margin: 2rem 0;
+}
+
+/* Prevent headings from breaking across columns */
+.text-columns h1,
+.text-columns h2,
+.text-columns h3,
+.text-columns h4,
+.text-columns h5,
+.text-columns h6 {
+    break-after: avoid;
+    column-break-after: avoid;
+}
+
+/* Prevent images/figures from breaking */
+.text-columns img,
+.text-columns figure {
+    break-inside: avoid;
+    column-break-inside: avoid;
+}
+
+/* Mobile - single column */
+@media (max-width: 640px) {
+    .text-columns {
+        column-count: 1 !important;
+    }
+}
+
+/* ~~~ Color Shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Inline colored text */
+.color-primary {
+    color: var(--color-primary);
+}
+.color-secondary {
+    color: var(--color-secondary);
+}
+.color-accent-1 {
+    color: var(--color-accent-1);
+}
+.color-accent-2 {
+    color: var(--color-accent-2);
+}
+.color-accent-3 {
+    color: var(--color-accent-3);
+}
+.color-error {
+    color: var(--color-error);
+}
+
+/* ~~~ Highlight Shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* Highlight boxes */
 .highlight-box {
@@ -1110,9 +1173,7 @@ footer {
     content: "⚡";
 }
 
-/* ============================================
-   Gallery
-   ============================================ */
+/* ~~~ Gallery Shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .gallery {
     width: 100%;
     margin: 0;
@@ -1165,9 +1226,7 @@ footer {
     letter-spacing: 0.05em;
 }
 
-/* ============================================
-   Table Styles
-   ============================================ */
+/* ~~~ Table Shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* Table wrapper with colored variants */
 .table-wrapper {
@@ -1267,9 +1326,7 @@ footer {
     border-bottom-color: var(--alert-note-color);
 }
 
-/* ============================================
-   Details Styles
-   ============================================ */
+/* ~~~ Details Shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* Details/collapsible boxes */
 .details-box {
@@ -1315,9 +1372,7 @@ footer {
     border-top: 1px solid var(--color-bg-light);
 }
 
-/* ============================================
-   Img Styles
-   ============================================ */
+/* ~~~ Img Shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* Image figures */
 .img-figure {
@@ -1340,10 +1395,7 @@ footer {
     font-style: italic;
 }
 
-/* ============================================
-   Layout/Cell Styles
-   ============================================ */
-
+/* ~~~ Layout/Cell Shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .post-content .layout-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
@@ -1390,9 +1442,7 @@ footer {
     }
 }
 
-/* ============================================
-   TabGroup Styles
-   ============================================ */
+/* ~~~ TabGroup Shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* Tab groups */
 .tab-group {
@@ -1429,9 +1479,7 @@ footer {
     border-bottom-color: var(--color-primary);
 }
 
-/* ============================================
-   YouTube Styles
-   ============================================ */
+/* ~~~ YouTube Shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* YouTube embeds */
 .youtube-embed {
