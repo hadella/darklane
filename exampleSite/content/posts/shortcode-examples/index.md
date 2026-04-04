@@ -9,11 +9,13 @@ Darklane includes several custom shortcodes to enhance your content beyond stand
 
 This post demonstrates the *alert*, *highlight*, *details*, *img*, *tab*, *tabgroup*, *table*, and *youtube* shortcodes.
 
-
 <!--more-->
+{{< hr >}}
+
 
 ## Alert Shortcodes
-
+{{< layout cols="1 1" gap="1rem" >}}
+{{< md >}}
 Alerts come in several types for different purposes:
 
 {{< alert info >}}
@@ -45,7 +47,9 @@ You can also create unlabeled alerts:
 {{< alert >}}
 This is a simple alert without a label, useful for general callouts.
 {{< /alert >}}
+{{< /md >}}
 
+{{< md >}}
 ### alert types:
 
 - info
@@ -55,9 +59,12 @@ This is a simple alert without a label, useful for general callouts.
 - error
 - important
 - (empty) - no label
+{{< /md >}}
+{{< /layout >}}
 
 ## Highlight Shortcodes
-
+{{< layout cols="1 1" gap="1rem" >}}
+{{< md >}}
 Highlights are similar to alerts but with different styling:
 
 {{< highlight info >}}
@@ -83,19 +90,22 @@ This operation cannot be reversed.
 {{< highlight important >}}
 Always backup your data before proceeding.
 {{< /highlight >}}
-
+{{< /md >}}
+{{< md >}}
 ### highlight types
-
 - info
 - note
 - warning
 - success
 - error
 - important
+{{< /md >}}
+{{< /layout>}}
 
 ## Details (Collapsible Sections)
 
 Use details for optional information that readers can expand:
+{{< layout gap="1rem">}}
 
 {{< details "Click to see technical details" >}}
 Here's some detailed technical information that most readers might not need. By hiding it in a collapsible section, you keep the main content focused while still providing depth for interested readers.
@@ -115,12 +125,14 @@ params:
 ```
 {{< /details >}}
 
-## Tab Groups
+{{< /layout >}}
 
+## Tab Groups
 Tab groups let you show related content in different formats:
 
-{{< tabgroup >}}
+{{< layout cols="1 1" >}}
 
+{{< tabgroup >}}
 {{< tab title="Python" >}}
 ```python
 def hello():
@@ -150,6 +162,11 @@ func main() {
 
 {{< /tabgroup >}}
 
+{{< md >}}
+{{< /md >}}
+
+{{< /layout >}}
+
 ## Images with Captions
 
 The image shortcode provides consistent styling and optional captions:
@@ -166,20 +183,30 @@ You can also control the width:
 
 ## Colored Tables
 
-Use the table shortcode to add a little color to your table headers:
+Use the `table` shortcode to add a little color to your table headers:
+
+{{< columns >}}
 
 {{< table color="success" >}}
-
-| Language | Type | First Release |
-|----------|------|---------------|
-| Python | Interpreted | 1991 |
+| Language   | Type        | First Release |
+|----------  |-------------|---------------|
+| Python     | Interpreted | 1991 |
 | JavaScript | Interpreted | 1995 |
-| Go | Compiled | 2009 |
-| Rust | Compiled | 2010 |
-
+| Go         | Compiled    | 2009 |
+| Rust       | Compiled    | 2010 |
 {{< /table >}}
 
-Available colors: `info`, `note`, `warning`, `success`, `error`, `important`
+{{< md >}}
+### Colors
+- `info`
+- `note`
+- `warning`
+- `success`
+- `error`
+- `important`
+{{< /md >}}
+
+{{< /columns >}}
 
 ## YouTube Embeds
 
@@ -188,24 +215,5 @@ Embed YouTube videos easily:
 ```
 {{</* youtube "VIDEO_ID" title="Video Title" */>}}
 ```
-
-## Combining Shortcodes
-
-You can combine shortcodes to create rich content:
-
-{{< highlight info >}}
-**Before starting:** Make sure you have all prerequisites installed.
-{{< /highlight >}}
-
-{{< details "Prerequisites list" >}}
-- Hugo 0.112.0 or higher
-- Git
-- A text editor
-- Basic knowledge of Markdown
-{{< /details >}}
-
-{{< highlight success >}}
-Once you have everything ready, you can proceed with the installation!
-{{< /alert >}}
 
 These shortcodes help you create professional, informative content without writing custom HTML.

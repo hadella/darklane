@@ -8,7 +8,9 @@ tags: ["welcome", "theme", "hugo"]
 Welcome to the Darklane theme demo! This is a simple example post to showcase the basic layout and styling.
 
 <!--more-->
+{{< hr >}}
 
+{{< columns >}}
 ## What is Darklane?
 
 Darklane is a Hugo theme designed for technical blogs and documentation sites. It features a clean, dark aesthetic that's easy on the eyes during long reading or coding sessions.
@@ -20,6 +22,8 @@ Darklane is a Hugo theme designed for technical blogs and documentation sites. I
 - Responsive layout
 - Fast page loads
 - Easy to customize
+
+{{< hr style="fade" >}}
 
 ## Perfect For
 
@@ -34,3 +38,5 @@ This theme works great for:
 ## Get Started
 
 Check out the other example posts to see more of what Darklane can do, including code syntax highlighting, custom shortcodes, and LaTeX math support.
+
+{{< /columns >}}
