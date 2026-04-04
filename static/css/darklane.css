@@ -249,21 +249,24 @@ a:hover {
 
 .main-content {
     display: grid;
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr;  /* Default: full width */
     gap: 1rem;
     margin-top: 2rem;
 }
 
-/* Main content area (left column) */
-.content-column {
-    min-width: 0; /* Prevents grid blowout */
+/* When both columns exist, use two-column layout */
+.main-content .sidebar-column {
+    display: block;
 }
 
-/* Sidebar (right column) */
+/* Force two-column when sidebar-column class exists in DOM */
 .sidebar-column {
-    position: sticky;
-    top: 1rem;
-    align-self: start;
+    display: block;
+}
+
+/* Parent gets two columns if it contains sidebar */
+.container:has(.sidebar-column) .main-content {
+    grid-template-columns: 1fr 300px;
 }
 
 /* ~~~ HEADER & NAVIGATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

@@ -1,11 +1,17 @@
 {{ define "main" }}
 
 <!-- Check if viewing a specific year via URL parameter -->
-{{ $year := 0 }} {{ $urlPath := .RelPermalink }} {{ if strings.HasSuffix
-$urlPath "/" }} {{ $segments := split (strings.TrimSuffix "/" $urlPath) "/" }}
-{{ $lastSegment := index $segments (sub (len $segments) 1) }} {{ if eq (len
-$lastSegment) 4 }} {{ $year = int $lastSegment }} {{ end }} {{ end }} {{ if ne
-$year 0 }}
+{{ $year := 0 }}
+{{ $urlPath := .RelPermalink }}
+
+{{ if strings.HasSuffix $urlPath "/" }}
+	{{ $segments := split (strings.TrimSuffix "/" $urlPath) "/" }}
+	{{ $lastSegment := index $segments (sub (len $segments) 1) }}
+	{{ if eq (len $lastSegment) 4 }}
+		{{ $year = int $lastSegment }}
+	{{ end }}
+{{ end }}
+{{ if ne $year 0 }}
 <!-- Year archive view -->
 <header class="list-header">
     <h1>Posts from {{ $year }}</h1>

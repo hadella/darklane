@@ -9,12 +9,12 @@ A clean, dark-themed Hugo blog template designed for technical writing and docum
 
 - **Dark Color Scheme** - Easy on the eyes with carefully chosen accent colors
 - **Syntax Highlighting** - Beautiful code blocks with support for multiple languages
-- **Custom Shortcodes** - Alerts, highlights, collapsible sections, tabs, tables, and more
+- **Custom Shortcodes** - Alerts, highlights, collapsible sections, tabs, tables, galleries, layouts, and more
 - **LaTeX Support** - Write mathematical expressions inline or as display equations
 - **Responsive Design** - Works great on desktop and mobile devices
+- **Full-Width Posts** - Maximum layout flexibility with sidebar on home/list pages only
 - **CSS Variables** - Easy color customization through centralized configuration
 - **Clean Typography** - Optimized for long-form technical reading
- 
 ## Demo
 
 ![Darklane Theme](images/darklane-example.png)
@@ -133,6 +133,19 @@ All theme colors are defined as CSS variables in `static/css/darklane.css`. Edit
 
 - **Title Banner**: Place `title-banner.png` in `static/images/` for the site header background
 - **Post Banners**: Add banner images to each post's `images/` folder or set a default in config
+
+## Post Layout
+
+Individual posts use full-width layout (no sidebar) for maximum flexibility with multi-column content. The sidebar appears only on the home page and list pages (categories, tags, archives).
+
+For single-column prose, use the `columns` shortcode to create readable text width:
+```markdown
+{{< columns count="2" >}}
+Your paragraphs here flow across two columns naturally.
+{{< /columns >}}
+```
+
+For custom layouts, use `layout`/`cell`/`md` shortcodes to arrange content side-by-side.
 
 ## Shortcodes
 

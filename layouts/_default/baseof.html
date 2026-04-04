@@ -11,10 +11,12 @@
         {{ block "main" . }}{{ end }}
       </div>
 
-      <!-- Sidebar - shows on all pages -->
+      <!-- Sidebar - shows on list pages only -->
+	  {{ if not .IsPage }}
       <aside class="sidebar-column">
         {{ partial "sidebar.html" . }}
       </aside>
+	  {{ end }}
     </div>
   </div>
 
