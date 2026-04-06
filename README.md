@@ -9,12 +9,13 @@ A clean, dark-themed Hugo blog template designed for technical writing and docum
 
 - **Dark Color Scheme** - Easy on the eyes with carefully chosen accent colors
 - **Syntax Highlighting** - Beautiful code blocks with support for multiple languages
-- **Custom Shortcodes** - Alerts, highlights, collapsible sections, tabs, tables, galleries, layouts, and more
+- **Custom Shortcodes** - Hints, flags, collapsible sections, tabs, tables, galleries, layouts, and more
 - **LaTeX Support** - Write mathematical expressions inline or as display equations
 - **Responsive Design** - Works great on desktop and mobile devices
 - **Full-Width Posts** - Maximum layout flexibility with sidebar on home/list pages only
 - **CSS Variables** - Easy color customization through centralized configuration
 - **Clean Typography** - Optimized for long-form technical reading
+
 ## Demo
 
 ![Darklane Theme](images/darklane-example.png)
@@ -151,27 +152,31 @@ For custom layouts, use `layout`/`cell`/`md` shortcodes to arrange content side-
 
 Darklane includes several custom shortcodes:
 
-### Alerts
-
+### hint
+Subtle border-left callout for supplementary content:
 ```markdown
-{{< alert warning >}}
-This is a warning message.
-{{< /alert >}}
+{{% hint info %}}
+This is a helpful tip.
+{{% /hint %}}
 ```
 
-Types: `info`, `note`, `warning`, `success`, `error`, `important`
+Types: `info`, `note`, `warning`, `success`, `error`, `important`, or
+empty for an unlabeled callout.
 
-### Highlights
+### flag
+
+Prominent full-border callout with icon prefix:
 
 ```markdown
-{{< highlight tip >}}
-This is important information.
-{{< /highlight >}}
+{{% flag info %}}
+Key point or important information.
+{{% /flag %}}
 ```
 
-Types: `info`, `note`, `warning`, `success`, `error`, `important`
+Types: `info`, `note`, `warning`, `success`, `error`, `important`.
+Second positional param `true` adds a tinted background.
 
-### Collapsible Details
+### details
 
 ```markdown
 {{< details "Click to expand" >}}
@@ -179,7 +184,7 @@ Hidden content here.
 {{< /details >}}
 ```
 
-### Tab Groups
+### tab / tabgroup
 
 ```markdown
 {{< tabgroup >}}
@@ -196,7 +201,7 @@ console.log("Hello");
 {{< /tabgroup >}}
 ```
 
-### Gallery
+### gallery
 ```
 {{< gallery >}}
 https://r2.yourdomain.com/cars/frog/shot1.jpg
@@ -221,13 +226,13 @@ while hovering over the gallery. Counter shown as `1/N` centered
 between arrows. Image height is driven by the image dimensions —
 no fixed aspect ratio.
 
-### Images
+### img
 
 ```markdown
 {{< img src="images/photo.jpg" width="600" caption="Photo caption" >}}
 ```
 
-### Tables
+### table
 
 ```markdown
 {{< table color="info" >}}
@@ -247,84 +252,61 @@ Colors: `info`, `note`, `warning`, `success`, `error`, `important`
 {{< cell >}}
 {{< img src="photo.jpg" >}}
 {{< /cell >}}
-{{< cell >}}
-<p>Text next to image.</p>
-{{< /cell >}}
-{{< /layout >}}
-```
-
-For cells containing markdown (lists, headings, inline code) use `md`
-instead of `cell`:
-```
-{{< layout cols="1 2" gap="1rem" >}}
 {{< md >}}
-- Item one
-- Item two
-- Item three
-{{< /md >}}
-{{< md text="justify" >}}
-Lorem ipsum dolor sit amet...
+- markdown list
+- **bold** text
 {{< /md >}}
 {{< /layout >}}
 ```
 
-Layouts can be nested inside cells for complex arrangements.
+Use `cell` for shortcode and HTML content. Use `md` for markdown content.
+Both accept a `text` param for alignment: `left`, `center`, `right`, `justify`.
 
-Parameters for `layout`:
-- `cols` — space-separated fr values e.g. `"1 2"` for 1/3 and 2/3
-            (default: equal columns based on cell count)
-- `gap` — gap between cells (default: `0`)
-- `align` — vertical alignment: `top`, `center`, `bottom`
-             (default: `top`)
-
-Parameters for `cell` and `md`:
-- `text` — text alignment: `left`, `center`, `right`, `justify`
-            (default: inherited from page)
-
-Use `cell` for shortcode content, `md` for markdown content.
-Mixing both within the same `layout` is supported.
-
-### Columns
+### columns
 ```markdown
 {{< columns count="2" gap="2rem" >}}
 Text flows naturally across columns like a newspaper.
 {{< /columns >}}
 ```
 
-Parameters: `count` (default: 2), `gap` (default: 2rem). Collapses to single column on mobile.
+Parameters:
+- `count` — number of columns (default: `2`)
+- `gap` — space between columns (default: `2rem`)
+- `align` — text alignment: `left`, `center`, `right`, `justify`
+             (default: `left`)
 
-### Color
+### color
 ```markdown
 Regular text with {{< color "primary" >}}cyan highlight{{< /color >}} inline.
 ```
 
 Colors: `primary`, `secondary`, `accent-1`, `accent-2`, `accent-3`, `error`
 
-### HR
+### hr
 ```markdown
 {{< hr >}}
-{{< hr style="dots" >}}
-{{< hr style="dashed" >}}
-{{< hr style="fade" >}}
+{{< hr dots >}}
+{{< hr dashed >}}
+{{< hr fade >}}
 ```
 
-Styles: `line` (default), `dots`, `dashed`, `fade`. Better than markdown's default `---`.
+Parameters:
+- style (positional 0) — `line`, `dots`, `fade`, `dashes` (default: `line`)
+- color (positional 1) — `mute`, `info`, `note`, `warning`, `success`,
+                          `error`, `important` (default: `mute`)
 
-### Space
+### space
 ```markdown
 {{< space >}}
-
-{{< space height="3rem" >}}
+{{< space "3rem" >}}
 ```
-
+[
 Adds vertical whitespace between content blocks. Useful for creating extra breathing room beyond default spacing.
 
 Parameters:
-- `height` — Amount of vertical space (default: `1rem`)
+- `height` — Amount of vertical space (default: `1rem`)](Parameters: height (positional 0) — any valid CSS height value (default: `1rem`).)
 
-Common use cases: extra spacing between images, separating shortcode groups, adding emphasis between sections.
-
-### YouTube
+### youtube
 
 ```markdown
 {{< youtube "VIDEO_ID" title="Video Title" >}}
