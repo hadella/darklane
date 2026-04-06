@@ -1,16 +1,16 @@
 {{- /*
-    shortcodes/alert.html
+    shortcodes/hint.html
 
     Creates colored alert boxes with semantic types.
 
     Usage:
-        {{< alert >}}
+        {{< hint >}}
         Unlabeled alert box with grey border.
-        {{< /alert >}}
+        {{< /hint >}}
 
-        {{< alert warning >}}
+        {{< hint warning >}}
         Alert with colored label and border.
-        {{< /alert >}}
+        {{< /hint >}}
 
     Available types:
         - info      (cyan)
@@ -26,12 +26,12 @@
 {{- $type := .Get 0 | default "" | lower -}}
 
 {{- if eq $type "" -}}
-  <div class="alert-box">
+  <div class="hint-box">
     {{ .Inner | markdownify }}
   </div>
 {{- else -}}
-  <div class="alert alert-{{ $type }}">
-    <div class="alert-label">{{ $type }}</div>
-    <div class="alert-content">{{ .Inner | markdownify }}</div>
+  <div class="hint hint-{{ $type }}">
+    <div class="hint-label">{{ $type }}</div>
+    <div class="hint-content">{{ .Inner | markdownify }}</div>
   </div>
 {{- end -}}

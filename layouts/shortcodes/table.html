@@ -1,36 +1,30 @@
 {{- /*
     shortcodes/table.html
 
-    Wraps markdown tables with optional colored headers.
-
     Usage:
         {{< table >}}
-        | Name | Age |
-        |------|-----|
-        | John | 30  |
+        | Col 1 | Col 2 |
+        |-------|-------|
+        | a     | b     |
         {{< /table >}}
 
-        {{< table color="info" >}}
-        | Header | Header |
-        |--------|--------|
-        | Data   | Data   |
+        {{< table info "My caption" >}}
+        ...
         {{< /table >}}
 
-        Available colors:
-            - info      (cyan)
-            - success   (green)
-            - note      (magenta/purple)
-            - warning   (orange)
-            - important (yellow)
-            - error     (red)
-
-    Default: no color (white headers with grey borders)
-
-    Colored tables have matching header text and outer border, with grey cell borders.
+    Parameters:
+        color   (positional 0) — info, note, warning, success, error,
+                                 important (default: info)
+        caption (positional 1) — caption shown above table
+                                 (default: none)
 */ -}}
 
-{{- $color := .Get "color" | default "" | lower -}}
+{{- $color   := .Get 0 | default "" | lower -}}
+{{- $caption := .Get 1 | default "" -}}
 
-<div class="table-wrapper table-{{ $color }}">
-  {{ .Inner | markdownify }}
+<div class="table-wrapper{{ if $color }} table-{{ $color }}{{ end }}">
+    {{- if $caption }}
+    <p class="table-caption">{{ $caption }}</p>
+    {{- end }}
+    {{ .Inner | markdownify }}
 </div>

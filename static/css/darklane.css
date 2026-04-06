@@ -249,7 +249,7 @@ a:hover {
 
 .main-content {
     display: grid;
-    grid-template-columns: 1fr;  /* Default: full width */
+    grid-template-columns: 1fr; /* Default: full width */
     gap: 1rem;
     margin-top: 2rem;
 }
@@ -471,7 +471,7 @@ nav a:hover {
     margin-bottom: 0;
 }
 
-/* Bold text at start of blockquote (for alert labels) */
+/* Bold text at start of blockquote (for hint labels) */
 .post-content blockquote strong:first-child,
 .post-content blockquote p:first-child strong:first-child {
     display: inline-block;
@@ -481,90 +481,6 @@ nav a:hover {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--color-accent-2);
-}
-
-/* GitHub-flavored Markdown alerts */
-.markdown-alert {
-    background-color: var(--color-bg-dark);
-    border: 2px solid;
-    padding: 1rem 1.5rem;
-    margin: 2rem 0;
-    border-radius: 4px;
-    font-style: normal;
-}
-
-.markdown-alert-title {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
-
-.markdown-alert-title::before {
-    margin-right: 0.5rem;
-    font-size: 1rem;
-}
-
-.markdown-alert-note {
-    border-color: var(--color-secondary);
-}
-
-.markdown-alert-note .markdown-alert-title {
-    color: var(--color-secondary);
-}
-
-.markdown-alert-note .markdown-alert-title::before {
-    content: "!";
-}
-
-.markdown-alert-tip {
-    border-color: var(--color-primary);
-}
-
-.markdown-alert-tip .markdown-alert-title {
-    color: var(--color-primary);
-}
-
-.markdown-alert-tip .markdown-alert-title::before {
-    content: "★";
-}
-
-.markdown-alert-warning {
-    border-color: var(--color-accent-2);
-}
-
-.markdown-alert-warning .markdown-alert-title {
-    color: var(--color-accent-2);
-}
-
-.markdown-alert-warning .markdown-alert-title::before {
-    content: "⚠";
-}
-
-.markdown-alert-important {
-    border-color: var(--color-accent-3);
-}
-
-.markdown-alert-important .markdown-alert-title {
-    color: var(--color-accent-3);
-}
-
-.markdown-alert-important .markdown-alert-title::before {
-    content: "‼";
-}
-
-.markdown-alert-caution {
-    border-color: var(--color-error);
-}
-
-.markdown-alert-caution .markdown-alert-title {
-    color: var(--color-error);
-}
-
-.markdown-alert-caution .markdown-alert-title::before {
-    content: "✗";
 }
 
 /* ~~~ POST PREVIEW (Home page) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -915,10 +831,10 @@ footer {
     margin-bottom: 2rem;
 }
 
-/* ~~~ Alert Shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ hint shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-/* Base alert box (no label) */
-.alert-box {
+/* Base hint box (no label) */
+.hint-box {
     background-color: var(--color-bg-dark);
     border-left: 3px solid var(--color-text-dim);
     padding: 1rem 1.5rem;
@@ -927,8 +843,8 @@ footer {
     color: var(--color-text);
 }
 
-/* Shared alert styling */
-.alert {
+/* Shared hint styling */
+.hint {
     background-color: var(--color-bg-dark);
     padding: 1rem 1.5rem;
     margin: 1rem 0;
@@ -936,7 +852,7 @@ footer {
     border-left: 3px solid;
 }
 
-.alert-label {
+.hint-label {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.9rem;
@@ -944,54 +860,76 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-.alert-content {
+.hint-content {
     color: var(--color-text);
 }
 
 /* Type variants */
-.alert-info {
+.hint-info {
     border-color: var(--alert-info-color);
 }
-.alert-info .alert-label {
+.hint-info .hint-label {
     color: var(--alert-info-color);
 }
 
-.alert-note {
+.hint-note {
     border-color: var(--alert-note-color);
 }
-.alert-note .alert-label {
+.hint-note .hint-label {
     color: var(--alert-note-color);
 }
 
-.alert-warning {
+.hint-warning {
     border-color: var(--alert-warning-color);
 }
-.alert-warning .alert-label {
+.hint-warning .hint-label {
     color: var(--alert-warning-color);
 }
 
-.alert-success {
+.hint-success {
     border-color: var(--alert-success-color);
 }
-.alert-success .alert-label {
+.hint-success .hint-label {
     color: var(--alert-success-color);
 }
 
-.alert-error {
+.hint-error {
     border-color: var(--alert-error-color);
 }
-.alert-error .alert-label {
+.hint-error .hint-label {
     color: var(--alert-error-color);
 }
 
-.alert-important {
+.hint-important {
     border-color: var(--alert-important-color);
 }
-.alert-important .alert-label {
+.hint-important .hint-label {
     color: var(--alert-important-color);
 }
 
-/* ~~~ HR Shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ hr shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.hr-color-mute {
+    --hr-color: var(--color-text-dim);
+}
+.hr-color-info {
+    --hr-color: var(--alert-info-color);
+}
+.hr-color-note {
+    --hr-color: var(--alert-note-color);
+}
+.hr-color-warning {
+    --hr-color: var(--alert-warning-color);
+}
+.hr-color-success {
+    --hr-color: var(--alert-success-color);
+}
+.hr-color-error {
+    --hr-color: var(--alert-error-color);
+}
+.hr-color-important {
+    --hr-color: var(--alert-important-color);
+}
 
 /* Horizontal dividers */
 .hr-divider {
@@ -1003,14 +941,14 @@ footer {
 /* Solid line (default) */
 .hr-line {
     height: 0.5px;
-    background: var(--color-primary);
+    background: var(--hr-color, var(--color-text-dim));
     border: none;
 }
 
 /* Three dots */
 .hr-dots::before {
     content: "• • •";
-    color: var(--color-text-dim);
+    color: var(--hr-color, var(--color-text-dim));
     font-size: 1rem;
     letter-spacing: 1rem;
 }
@@ -1021,7 +959,7 @@ footer {
     background: linear-gradient(
         to right,
         transparent,
-        var(--color-text-dim) 50%,
+        var(--hr-color, var(--color-text-dim)) 50%,
         transparent
     );
     border: none;
@@ -1031,7 +969,7 @@ footer {
 .hr-dashed {
     height: 0;
     border: none;
-    border-top: 1px dashed var(--color-text-dim);
+    border-top: 1px dashed var(--hr-color, var(--color-text-dim));
 }
 
 /* ~~~ Columns Shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -1088,10 +1026,10 @@ footer {
     color: var(--color-error);
 }
 
-/* ~~~ Highlight Shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ flag shortcode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-/* Highlight boxes */
-.highlight-box {
+/* flag boxes */
+.flag-box {
     background-color: var(--color-bg-dark);
     padding: 1rem 1.5rem;
     margin: 2rem 0;
@@ -1099,14 +1037,14 @@ footer {
     border: 2px solid;
 }
 
-.highlight-label {
+.flag-label {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
 }
 
-.highlight-icon {
+.flag-icon {
     font-size: 1rem;
     margin-right: 0.5rem;
 }
@@ -1116,63 +1054,63 @@ footer {
 }
 
 /* Type variants */
-.highlight-info {
+.flag-info {
     border-color: var(--alert-info-color);
 }
-.highlight-info .highlight-label {
+.flag-info .flag-label {
     color: var(--alert-info-color);
 }
-.highlight-info .highlight-icon::before {
+.flag-info .flag-icon::before {
     content: "★";
 }
 
-.highlight-note {
+.flag-note {
     border-color: var(--alert-note-color);
 }
-.highlight-note .highlight-label {
+.flag-note .flag-label {
     color: var(--alert-note-color);
 }
-.highlight-note .highlight-icon::before {
+.flag-note .flag-icon::before {
     content: "✎";
 }
 
-.highlight-warning {
+.flag-warning {
     border-color: var(--alert-warning-color);
 }
-.highlight-warning .highlight-label {
+.flag-warning .flag-label {
     color: var(--alert-warning-color);
 }
-.highlight-warning .highlight-icon::before {
+.flag-warning .flag-icon::before {
     content: "⚠";
 }
 
-.highlight-success {
+.flag-success {
     border-color: var(--alert-success-color);
 }
-.highlight-success .highlight-label {
+.flag-success .flag-label {
     color: var(--alert-success-color);
 }
-.highlight-success .highlight-icon::before {
+.flag-success .flag-icon::before {
     content: "✓";
 }
 
-.highlight-error {
+.flag-error {
     border-color: var(--alert-error-color);
 }
-.highlight-error .highlight-label {
+.flag-error .flag-label {
     color: var(--alert-error-color);
 }
-.highlight-error .highlight-icon::before {
+.flag-error .flag-icon::before {
     content: "✗";
 }
 
-.highlight-important {
+.flag-important {
     border-color: var(--alert-important-color);
 }
-.highlight-important .highlight-label {
+.flag-important .flag-label {
     color: var(--alert-important-color);
 }
-.highlight-important .highlight-icon::before {
+.flag-important .flag-icon::before {
     content: "⚡";
 }
 

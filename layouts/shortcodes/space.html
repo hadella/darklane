@@ -6,14 +6,15 @@
     Usage:
         {{< space >}}
 
-        {{< space height="2rem" >}}
+        {{< space "2rem" >}}
 
     Parameters:
-        - height: Amount of space (default: 1rem)
+            height (positional 0) — any valid CSS height value
+                                    (default: 1rem)
 
     Useful for adding breathing room between sections without <br> tags.
 */ -}}
 
-{{- $height := .Get "height" | default "1rem" -}}
+{{- $height := .Get 0 | default "1rem" -}}
 
-<div class="space-block" style="height: {{ $height }};"></div>
+<div style="height: {{ $height }};"></div>

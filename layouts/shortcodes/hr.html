@@ -6,19 +6,21 @@
     Usage:
         {{< hr >}}
 
-        {{< hr style="dots" >}}
+        {{< hr dots >}}
 
-        {{< hr style="gradient" >}}
+        {{< hr fade >}}
 
-    Available styles:
-        - line     (default: solid line with accent color)
-        - dots     (three centered dots)
-        - dashes   (dotted lines all the way across)
-        - fade     (fade from edges to center)
+    Style options:
+            line   — solid line
+            dots   — three centered dots
+            fade   — line that fades at edges
+            dashed — dashed line across
 
-    Better than markdown's default `---` with customizable visual styles.
+    Color options match hint/flag types. When omitted
+        the mute (normal text) color is used.
 */ -}}
 
-{{- $style := .Get "style" | default "line" -}}
+{{- $style := .Get 0 | default "line" | lower -}}
+{{- $color := .Get 1 | default "" | lower -}}
 
-<div class="hr-divider hr-{{ $style }}"></div>
+<div class="hr-divider hr-{{ $style }}{{ if $color }} hr-color-{{ $color }}{{ end }}"></div>

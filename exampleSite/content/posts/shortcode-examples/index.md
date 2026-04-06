@@ -7,51 +7,50 @@ tags: ["shortcodes", "features"]
 
 Darklane includes several custom shortcodes to enhance your content beyond standard Markdown.
 
-This post demonstrates the *alert*, *highlight*, *details*, *img*, *tab*, *tabgroup*, *table*, and *youtube* shortcodes.
+This post demonstrates the *hint*, *flag*, *details*, *img*, *tab*, *tabgroup*, *table*, and *youtube* shortcodes.
 
 <!--more-->
 {{< hr >}}
 
 
-## Alert Shortcodes
+## Hint Shortcodes
 {{< layout cols="1 1" gap="1rem" >}}
 {{< md >}}
-Alerts come in several types for different purposes:
+Hints come in several types for different purposes:
 
-{{< alert info >}}
-This is an informational alert. Great for sharing helpful info.
-{{< /alert >}}
+{{< hint info >}}
+This is an informational hint. Great for sharing helpful info.
+{{< /hint >}}
 
-{{< alert note >}}
-This is a note alert. Use it for general observations or side notes.
-{{< /alert >}}
+{{< hint note >}}
+This is a note hint. Use it for general observations or side notes.
+{{< /hint >}}
 
-{{< alert warning >}}
-This is a warning alert. Use it to caution readers about potential issues.
-{{< /alert >}}
+{{< hint warning >}}
+This is a warning hint. Use it to caution readers about potential issues.
+{{< /hint >}}
 
-{{< alert success >}}
-This is an success alert. Perfect for highlighting achievements.
-{{< /alert >}}
+{{< hint success >}}
+This is an success hint. Perfect for highlighting achievements.
+{{< /hint >}}
 
-{{< alert error >}}
-This is an error alert. Perfect for highlighting mistakes to avoid.
-{{< /alert >}}
+{{< hint error >}}
+This is an error hint. Perfect for highlighting mistakes to avoid.
+{{< /hint >}}
 
-{{< alert important >}}
-This is an important alert. Use it for **critical** information.
-{{< /alert >}}
+{{< hint important >}}
+This is an important hint. Use it for **critical** information.
+{{< /hint >}}
 
-You can also create unlabeled alerts:
+You can also create unlabeled hint:
 
-{{< alert >}}
-This is a simple alert without a label, useful for general callouts.
-{{< /alert >}}
+{{< hint >}}
+This is a simple hint without a label, useful for general callouts.
+{{< /hint >}}
 {{< /md >}}
 
 {{< md >}}
-### alert types:
-
+### hint types:
 - info
 - note
 - warning
@@ -62,37 +61,37 @@ This is a simple alert without a label, useful for general callouts.
 {{< /md >}}
 {{< /layout >}}
 
-## Highlight Shortcodes
+## Flag Shortcodes
 {{< layout cols="1 1" gap="1rem" >}}
 {{< md >}}
-Highlights are similar to alerts but with different styling:
+Flags are similar to hints but with different styling:
 
-{{< highlight info >}}
-Highlights are great for key takeaways and important points.
-{{< /highlight >}}
+{{< flag info >}}
+Flags are great for key takeaways and important points.
+{{< /flag >}}
 
-{{% highlight note %}}
-Highlights are great for sharing key takeaways and notes.
-{{% /highlight %}}
+{{% flag note %}}
+Flags are great for sharing key takeaways and notes.
+{{% /flag %}}
 
-{{< highlight warning >}}
-e careful with this approach in production environments.
-{{< /highlight >}}
+{{< flag warning >}}
+Be careful with this approach in production environments.
+{{< /flag >}}
 
-{{< highlight success >}}
+{{< flag success >}}
 Your configuration is working correctly!
-{{< /highlight >}}
+{{< /flag >}}
 
-{{< highlight error >}}
+{{< flag error >}}
 This operation cannot be reversed.
-{{< /highlight >}}
+{{< /flag >}}
 
-{{< highlight important >}}
+{{< flag important >}}
 Always backup your data before proceeding.
-{{< /highlight >}}
+{{< /flag >}}
 {{< /md >}}
 {{< md >}}
-### highlight types
+### flag types
 - info
 - note
 - warning
@@ -187,7 +186,7 @@ Use the `table` shortcode to add a little color to your table headers:
 
 {{< columns >}}
 
-{{< table color="success" >}}
+{{< table success >}}
 | Language   | Type        | First Release |
 |----------  |-------------|---------------|
 | Python     | Interpreted | 1991 |

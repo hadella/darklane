@@ -24,9 +24,9 @@ Darklane supports all six header levels with clean typography:
 ##### H5 Header
 ###### H6 Header
 
-{{< alert info >}}
+{{< hint info >}}
 You can also add color to headers using CSS classes
-{{< /alert >}}
+{{< /hint >}}
 
 ## Colored Header {.text-primary}
 ## Another Color {.text-accent-2}
@@ -123,10 +123,10 @@ This table shows the default stying; it doesn't use a shortcode.
 | Rust       | Compiled    | 2010          |
 {{< /md >}}
 
-{{< alert note >}}
+{{< hint note >}}
 Tables don't need to *line-up* in the markdown to render correctly, but are
 much easier to interpret when just reading as text.
-{{< /alert>}}
+{{< /hint>}}
 
 {{< /columns >}}
 
@@ -146,14 +146,14 @@ The next example uses the `table` shortcode.
 {{< /cell >}}
 
 {{< cell >}}
-{{< alert info >}}
+{{< hint info >}}
 Without a color argument, the border between the labels data will be `--color-primary`.
-{{< /alert >}}
+{{< /hint >}}
 {{< /cell >}}
 
 {{< /layout >}}
 
-{{< space height="2rem" >}}
+{{< space "2rem" >}}
 
 ## Blockquotes
 {{< layout col="1 1" >}}

@@ -50,13 +50,13 @@ We can also use a "width" param as an argument to reduce or control the width.
 
 ## Space Shortcode
 
-The space shortcode can be used to insert blank lines or breaks between elements.
+The `space` shortcode can be used to insert blank lines or breaks between elements.
 
 The next two images have the default gap between them
 {{< img src="images/frame-1.jpg" width="600" >}}
 {{< img src="images/frame-2.jpg" width="600" >}}
 
-By using the *space* shortcode we can increase the gap between the next two images.
+By using the `space` shortcode we can increase the gap between the next two images.
 {{< img src="images/frame-3.jpg" width="600" >}}
 {{< space >}}
 {{< img src="images/frame-4.jpg" width="600" >}}
@@ -75,7 +75,7 @@ Notice the text will flow naturally together even though each sentence was on it
 
 This is a line of text. And this is yet another.
 {{< space >}}
-By using the *space* shortcode in between this line is now below the others.
+By using the `space` shortcode in between this line is now below the others.
 
 ## Columns Shortcode
 
@@ -84,9 +84,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-{{< alert note >}}
+{{< hint note >}}
 Columns automatically flows and sizes
-{{< /alert>}}
+{{< /hint>}}
 
 {{< img src="images/frame-1.jpg" >}}
 
@@ -117,11 +117,10 @@ The {{< color "primary" >}}color{{< /color >}} shortcode can be used to give a {
 {{< color "secondary" >}}
 {{< md >}}
 This is a entire block of colored test within an **md** shortcode.
-{{< highlight info >}}
-This highlight's styling should be uneffected even though it's embedded inside the **color** shortcode.
-{{< /highlight >}}
 {{< /md>}}
 {{< /color >}}
+
+{{< space "2rem" >}}
 
 ## HR Shortcode
 
@@ -129,7 +128,7 @@ The default markdown horizontal rule (`---`) looks like this:
 
 ---
 
-{{< space height="4rem" >}}
+{{< space "4rem" >}}
 
 The **hr** shortcode provides styled dividers for better visual separation between sections.
 
@@ -137,24 +136,23 @@ Without options, it renders a thin solid line:
 
 {{< hr >}}
 
-Same as explicitly using `style="line"`:
+Same as explicitly using `line`:
 
-{{< hr style="line" >}}
+{{< hr line >}}
 
 The `dots` style creates a centered ornament:
 
-{{< hr style="dots" >}}
+{{< hr dots >}}
 
-Dashed line span the full width:
+Dashed line span the full width using success color:
 
-{{< hr style="dashed" >}}
+{{< hr dashed success >}}
 
-The `fade` style creates a gradient from the edges:
+The `fade` style creates a gradient from the edges using note color:
 
-{{< hr style="fade" >}}
+{{< hr fade note >}}
 
 ### Available styles
-
 - `line` — solid line (default)
 - `dots` — centered three-dot ornament
 - `dashed` — dashed line across

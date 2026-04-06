@@ -23,7 +23,7 @@ Darklane is a Hugo theme designed for technical blogs and documentation sites. I
 - Fast page loads
 - Easy to customize
 
-{{< hr style="fade" >}}
+{{< hr fade >}}
 
 ## Perfect For
 

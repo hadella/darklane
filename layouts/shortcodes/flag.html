@@ -1,12 +1,12 @@
 {{- /*
-    shortcodes/highlight.html
+    shortcodes/flag.html
 
-    Creates emphasis boxes with icons and full border (vs alert's left border).
+    Creates emphasis boxes with icons and full border (vs hints's left border).
 
     Usage:
-        {{< highlight info >}}
+        {{< flag info >}}
         Important information to highlight.
-        {{< /highlight >}}
+        {{< /flag >}}
 
     Available types:
         - info      (cyan, ★ icon)
@@ -18,16 +18,16 @@
 
     Default type: "info" if not specified
 
-    Renders with full colored border, icon, and label. Similar to alert but more prominent.
+    Renders with full colored border, icon, and label. Similar to hint but more prominent.
 */ -}}
 
 {{- $type := .Get 0 | default "info" | lower -}}
 
-<div class="highlight-box highlight-{{ $type }}">
-  <div class="highlight-label">
-    <span class="highlight-icon"></span>{{ $type }}
+<div class="flag-box flag-{{ $type }}">
+  <div class="flag-label">
+    <span class="flag-icon"></span>{{ $type }}
   </div>
-  <div class="highlight-content">
+  <div class="flag-content">
     {{ .Inner | markdownify }}
   </div>
 </div>

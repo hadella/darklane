@@ -170,21 +170,21 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapi
 {{< /md >}}
 
 {{< cell >}}
-{{% alert info %}}
-This is an informational alert. Great for sharing helpful info. No tint.
-{{% /alert %}}
+{{% hint info %}}
+This is an informational hint. Great for sharing helpful info. No tint.
+{{% /hint %}}
 
-{{% alert warning %}}
-This is a warning alert. Use it to caution readers about potential issues.
-{{% /alert %}}
+{{% hint warning %}}
+This is a warning hint. Use it to caution readers about potential issues.
+{{% /hint %}}
 
-{{% highlight note %}}
-Highlights are great for sharing key takeaways and notes. No tint.
-{{% /highlight %}}
+{{% flag note %}}
+Flags are great for sharing key takeaways and notes. No tint.
+{{% /flag %}}
 
-{{% highlight success %}}
+{{% flag success %}}
 Your configuration is working correctly! No tint.
-{{% /highlight %}}
+{{% /flag %}}
 {{< /cell >}}
 
 {{< cell text="justify" >}}
@@ -262,7 +262,7 @@ func main() {
 {{< /cell >}}
 
 {{< cell >}}
-{{< table color="note">}}
+{{< table note >}}
 
 | Language   | Type        | First Release |
 |------------|-------------|---------------|
@@ -286,17 +286,17 @@ You can include any Markdown content here:
 {{< /cell >}}
 
 {{< cell >}}
-{{% alert info %}}
-This is an informational alert. Great for sharing helpful info. No tint.
-{{% /alert %}}
+{{% hint info %}}
+This is an informational hint. Great for sharing helpful info. No tint.
+{{% /hint %}}
 
-{{% alert warning %}}
-This is a warning alert. Use it to caution readers about potential issues.
-{{% /alert %}}
+{{% hint warning %}}
+This is a warning hint. Use it to caution readers about potential issues.
+{{% /hint %}}
 
-{{% highlight note %}}
-Highlights are great for sharing key takeaways and notes. No tint.
-{{% /highlight %}}
+{{% flag note %}}
+Flags are great for sharing key takeaways and notes. No tint.
+{{% /flag %}}
 {{< /cell >}}
 
 {{< cell >}}
